@@ -1,0 +1,317 @@
+// main variables
+$bg-main: #116914;
+$bg-container: #dbe0e2;
+$bg-title: #116914;
+$bg-paragraph: #052d2e;
+$accentColor: #a7f6a7;
+
+$bg: #242526; /*  #272727  #333  */
+$bg-accent: #484a4d;
+$bg-white: #f8f8ff;
+$main-bg: #1e1645;
+$itemBackground: rgba(30, 31, 83, 0.14);
+$bgColorBtn: #3a7d5c;
+$btnSecondary: #255d79;
+$max-width: 1140px;
+
+// text
+$font-family-main: 'Open Sans', sans-serif;
+$font-family-title: 'Roboto', sans-serif;
+$text-color: #dadce1;
+// $white: rgb(250, 250, 250);
+
+// border
+$border-1: 1px solid #474a4d;
+$border-2: 1px solid #c0c0c0; // hea hallikas border
+$border-highlight: #93f4ab;
+$gridBorder: 1px solid rgb(64, 11, 114);
+$doubleBorder: 4px double rgb(198, 200, 198);
+
+// btn variables
+$btnText: rgb(246, 245, 245);
+$btnBg: #116914;
+$btnBorder: 4px double #b7d5d4;
+$btnHoverBg: #178c1b;
+$btnTransition: background 0.4s ease-out;
+$btnShadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+// shadow
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$itemBoxShadow: 0px 2px 5px 3px rgb(148, 148, 148);
+$paperBoxShadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+// breakpoints
+$extra-large: 1920px;
+$big-screen: 1140px;
+$tablet: 960px;
+$mobile: 600px;
+$small-mobile: 400px;
+
+// mixins
+@mixin mediaQuery($breakpoint, $minOrMaxWidth: max-width) {
+  @media only screen and (#{$minOrMaxWidth}: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin mediaQuery2($breakpoint) {
+  @media only screen and ($breakpoint) {
+    @content;
+  }
+}
+
+@mixin buttonDefault {
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $btnText;
+  letter-spacing: 0.06em;
+  background: $btnBg;
+  border: $btnBorder;
+  border-radius: 0.15em;
+  box-shadow: $btnShadow;
+  transition: $btnTransition;
+  cursor: pointer;
+}
+
+@mixin active {
+  &:active {
+    box-shadow: inset 0px 0px 5px #d8dddf;
+  }
+}
+
+// resets & consistency
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  //   margin: 0;
+  //   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-family-main;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+  display: none;
+}
