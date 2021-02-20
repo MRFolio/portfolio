@@ -4,6 +4,7 @@ $bg-container: #dbe0e2;
 $bg-title: #116914;
 $bg-paragraph: #052d2e;
 $accentColor: #a7f6a7;
+$accentColor: #e970d5;
 
 $bg: #242526; /*  #272727  #333  */
 $bg-accent: #484a4d;
@@ -17,8 +18,12 @@ $max-width: 1140px;
 // text
 $font-family-main: 'Open Sans', sans-serif;
 $font-family-title: 'Roboto', sans-serif;
-$text-color: #dadce1;
-// $white: rgb(250, 250, 250);
+$font-family-title: 'Lato', sans-serif;
+$font-family-title: 'Open Sans', sans-serif;
+$text-white: #dadce1;
+$text-black: #272727;
+$text-black2: #242526;
+$white: rgb(250, 250, 250);
 
 // border
 $border-1: 1px solid #474a4d;
@@ -87,8 +92,8 @@ $small-mobile: 400px;
 *::before,
 *::after {
   box-sizing: border-box;
-  //   margin: 0;
-  //   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -99,11 +104,24 @@ html {
 
 body {
   font-family: $font-family-main;
-  margin: 0;
+  // color: $text-white;
+  // color: $white;
+  // color: black;
+  // margin: 0;
 }
 
-a {
+ul > li {
+  list-style-type: none;
+}
+
+a,
+a:visited {
   text-decoration: none;
+  color: inherit;
+
+  // &:hover {
+  //   text-decoration: underline;
+  // }
 }
 
 /**

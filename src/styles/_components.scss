@@ -1,1 +1,25 @@
-@use "./base" as b;
+@use "base" as b;
+
+// Components: anything reusable such as buttons, navbars, cards etc.
+
+.title {
+  font-weight: 700;
+  font-family: b.$font-family-title;
+  //   letter-spacing: 0.02em;
+}
+
+.action-btn {
+  padding: 0.4em;
+  background-color: transparent;
+  border: 1px solid white;
+
+  .action-text {
+    color: b.$text-white;
+  }
+}
+
+.card {
+}
+
+.scroll-up {
+}

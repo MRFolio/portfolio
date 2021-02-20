@@ -4,7 +4,9 @@
   "description": "My personal portfolio website - Projects &amp; professional information",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,10 @@
     "url": "https://github.com/MRFolio/portfolio/issues"
   },
   "homepage": "https://github.com/MRFolio/portfolio#readme",
-  "dependencies": {}
+  "dependencies": {
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }

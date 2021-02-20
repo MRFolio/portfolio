@@ -8,13 +8,17 @@
     <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="MR is a Front-End Developer. This is a personal portfolio website showcasing completed projects and including professional information."
+      content="MR is a Front-End Developer. A personal portfolio website to showcase completed projects built with React. Contact information, questions and answers section is included as well."
     />
     <title>Personal portfolio website | MR</title>
     <link rel="apple-touch-icon" href="src/assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Roboto:wght@700;900&display=swap"
+      rel="stylesheet"
+    /> -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Lato:wght@400;700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700;800&family=Poppins:wght@400;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,82 +31,177 @@
   </head>
   <body>
     <header id="header">
+      <div class="header-left">
+        <i class="fas fa-code icon" aria-hidden="true"></i>
+        <div class="test-div">
+          <h1 class="font-test">Mropes <span>Rsoes</span></h1>
+          <span>Portfolio</span>
+        </div>
+        <!-- <h1 class="title website-heading">Mropes<span>Rsoes</span> portfolio </h1> -->
+        <h1 class="title website-heading">M<span>Roose</span> portfolio</h1>
+      </div>
       <nav class="nav">
-        <ul>
-          <li><a href="#home"></a>home</li>
-          <li><a href="#projects"></a>projects</li>
-          <li><a href="#skills"></a>skills</li>
-          <li><a href="#contact"></a>contact</li>
+        <ul class="navList">
+          <li><a href="#home">home</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <!-- HOME -->
-      <section id="home">
-        <div class="lead-content">
-          <h1>MR</h1>
-          <h2>Front-End Developer</h2>
-          <button><a href="#projects" class="action-btn"></a>Projects</button>
+    <!-- <main id="main"> -->
+    <!-- HOME -->
+    <section id="home" aria-label="Introduction">
+      <div class="intro-content">
+        <h1 class="title name">Mropes <span>Rsoes</span></h1>
+        <div class="divider-section">
+          <i class="fas fa-code icon" aria-hidden="true"></i>
         </div>
-      </section>
-      <!-- END OF HOME -->
-      <section id="projects"></section>
-      <section id="questionsAnswers"></section>
+        <h2 class="title position">
+          <span class="bracket"><</span>Front-End Developer
+          <span class="bracket">/></span>
+        </h2>
+        <p class="location">
+          <i class="fas fa-map-marker-alt icon" aria-hidden="true"></i>Tartu,
+          Estonia
+        </p>
+        <!-- <div class="divider"></div> -->
+        <p class="intro-text">
+          I like to create eye-catching visuals and focus on the smallest
+          details of product features. Slick visuals and smooth animations are
+          my thing.
+        </p>
+        <div class="divider"></div>
+        <!-- SOCIALS -->
+        <div class="social">
+          <ul class="social-list">
+            <li class="list-item">
+              <a
+                href="mailto:xyz@gmail.com"
+                class="menu-link"
+                title="Email"
+                aria-label="Email"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fas fa-envelope" aria-hidden="true"></i
+                ><span>Email</span>
+              </a>
+              <span class="circle">&#9679;</span>
+            </li>
+            <li class="list-item">
+              <a
+                href="https://github.com/MRFolio"
+                class="menu-link"
+                title="GitHub"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="fab fa-github" aria-hidden="true"></i
+                ><span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <!-- END OF SOCIALS -->
+        <button class="action-btn">
+          <a href="#projects" class="action-text">View my projects</a>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div class="on-light">
+          <button class="btn border-gradient-purple">
+            <a href="#projects" class="action-text">View my projects</a>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            <!-- <i class="fas fa-chevron-right" aria-hidden="true"></i> -->
+          </button>
+        </div>
+      </div>
+      <div class="illustration-container">
+        <img
+          class="intro-image"
+          src="src/assets/Coding _Monochromatic.svg"
+          alt="A person sitting on a office chair and coding in front of many displays"
+        />
+      </div>
+    </section>
+    <div class="divider-section">
+      <i class="fas fa-code icon" aria-hidden="true"></i>
+    </div>
+    <!-- END OF HOME -->
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="headingContainer">
+        <h3 class="title projectsHeading"><span> Recent projects</span></h3>
+      </div>
+      <div class="underline"></div>
+      <div class="projectsContainer">
+        <div class="link-container">
+          <button>
+            <a href="http://"
+              >LIVE <i class="fas fa-external-link-alt" aria-hidden="true"></i
+            ></a>
+          </button>
+          <button>
+            <a href="http://">
+              REPO <i class="fab fa-github" aria-hidden="true"></i
+            ></a>
+          </button>
+        </div>
+      </div>
       <i class="fas fa-arrow-up" aria-hidden="true"></i>
-      <!-- SOCIALS -->
-      <div class="social">
-        <ul>
-          <li>
-            <a
-              href="mailto:xyz@gmail.com"
-              class="menu-link"
-              title="Email"
-              aria-label="Email"
-              target="_blank"
-              rel="noreferrer"
-              ><i class="fas fa-envelope" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/"
-              class="menu-link"
-              title="GitHub"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noreferrer"
-              ><i class="fab fa-github-square" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/"
-              class="menu-link"
-              title="GitHub"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noreferrer"
-              ><i class="fab fa-github" aria-hidden="true"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-      <!-- END OF SOCIALS -->
-
-      <!-- SKILLS -->
-      <div id="skills">
-        <h2 class="heading-skills">Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-        </ul>
-      </div>
-      <!-- END OF SKILLS -->
-    </main>
-    <footer>Copyright &copy; <span id="year">2021</span> MR</footer>
+    </section>
+    <!-- END OF Projects -->
+    <!-- QA -->
+    <section id="questionsAnswers">QA</section>
+    <div class="title">
+      <h2 class="question-headline">
+        <span class="bg-text">Q&A</span>
+      </h2>
+    </div>
+    <section class="section-center">
+      <article class="question">
+        <div class="question-title">
+          <p>Why do you want to be a front-end developer?</p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon"><i class="fas fa-chevron-down"></i></span>
+            <span class="minus-icon"
+              ><i class="awesome fas fa-chevron-up"></i
+            ></span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+            libero ipsa cumque eligendi at, suscipit fugiat exercitationem?
+            Asperiores, natus doloremque?
+          </p>
+        </div>
+      </article>
+    </section>
+    <!-- END OF QA -->
+    <!-- SKILLS -->
+    <div id="skills">
+      <h2 class="heading-skills">Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SASS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+    </div>
+    <!-- END OF SKILLS -->
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="heading-skills">Contact</h2>
+      <p>
+        You can contact me at <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+      </p>
+    </section>
+    <!-- END OF CONTACT -->
+    <!-- </main> -->
+    <footer id="footer">&copy;<span id="year">2021</span> | MR</footer>
     <script src="src/scripts/main.js"></script>
   </body>
 </html>
