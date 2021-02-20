@@ -33,13 +33,56 @@
     <header id="header">
       <div class="header-left">
         <i class="fas fa-code icon" aria-hidden="true"></i>
-        <div class="test-div">
-          <h1 class="font-test">Mropes <span>Rsoes</span></h1>
-          <span>Portfolio</span>
-        </div>
-        <!-- <h1 class="title website-heading">Mropes<span>Rsoes</span> portfolio </h1> -->
+        <!-- <h1 class="title website-heading">Markus<span>Roose</span> portfolio </h1> -->
         <h1 class="title website-heading">M<span>Roose</span> portfolio</h1>
       </div>
+      <nav class="nav">
+        <ul class="navList">
+          <li>
+            <a
+              href="#home"
+              title="Go to home section"
+              aria-label="Go to home section"
+              >home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              title="Go to projects section"
+              aria-label="Go to projects section"
+              >projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              title="Go to skills section"
+              aria-label="Go to skills section"
+              >skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              title="Go to contact section"
+              aria-label="Go to contact section"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        class="hamburger-btn"
+        aria-label="Toggle navigation menu"
+        title="Toggle navigation menu"
+      >
+        <i class="fas fa-bars active" aria-hidden="true"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </header>
+    <aside class="sidebar">
       <nav class="nav">
         <ul class="navList">
           <li><a href="#home">home</a></li>
@@ -48,52 +91,49 @@
           <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
-    </header>
-    <!-- <main id="main"> -->
-    <!-- HOME -->
-    <section id="home" aria-label="Introduction">
-      <div class="intro-content">
-        <h1 class="title name">Mropes <span>Rsoes</span></h1>
-        <div class="divider-section">
+    </aside>
+    <main id="main">
+      <!-- HOME -->
+      <section id="home" aria-label="Introduction">
+        <div class="intro-content">
+          <h1 class="title name">Markus <span>Roose</span></h1>
+          <div class="divider-intro">
+            <i class="fas fa-code icon" aria-hidden="true"></i>
+          </div>
+          <!-- <div class="divider-section">
           <i class="fas fa-code icon" aria-hidden="true"></i>
-        </div>
-        <h2 class="title position">
+        </div> -->
+          <!-- <h2 class="title position">
           <span class="bracket"><</span>Front-End Developer
           <span class="bracket">/></span>
-        </h2>
-        <p class="location">
-          <i class="fas fa-map-marker-alt icon" aria-hidden="true"></i>Tartu,
-          Estonia
-        </p>
-        <!-- <div class="divider"></div> -->
-        <p class="intro-text">
+        </h2> -->
+          <h2 class="title job-position">Front-End Developer</h2>
+          <!-- <div class="divider"></div> -->
+          <!-- <p class="intro-text">
           I like to create eye-catching visuals and focus on the smallest
           details of product features. Slick visuals and smooth animations are
           my thing.
-        </p>
-        <div class="divider"></div>
-        <!-- SOCIALS -->
-        <div class="social">
+        </p> -->
+          <div class="divider"></div>
+          <!-- SOCIALS -->
           <ul class="social-list">
             <li class="list-item">
               <a
-                href="mailto:xyz@gmail.com"
+                href="mailto:roose.markus@gmail.com"
                 class="menu-link"
-                title="Email"
-                aria-label="Email"
-                target="_blank"
-                rel="noreferrer"
+                title="Markus Roose email"
+                aria-label="Markus Roose email"
                 ><i class="fas fa-envelope" aria-hidden="true"></i
                 ><span>Email</span>
               </a>
-              <span class="circle">&#9679;</span>
+              <span class="circleDivider" aria-hidden="true">&#9679;</span>
             </li>
             <li class="list-item">
               <a
                 href="https://github.com/MRFolio"
                 class="menu-link"
-                title="GitHub"
-                aria-label="GitHub"
+                title="Markus Roose GitHub"
+                aria-label="Markus Roose GitHub"
                 target="_blank"
                 rel="noreferrer"
                 ><i class="fab fa-github" aria-hidden="true"></i
@@ -101,107 +141,181 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="divider"></div>
-        <!-- END OF SOCIALS -->
-        <button class="action-btn">
-          <a href="#projects" class="action-text">View my projects</a>
-          <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          <i class="fas fa-chevron-right" aria-hidden="true"></i>
-        </button>
-        <div class="on-light">
-          <button class="btn border-gradient-purple">
+          <div class="divider"></div>
+          <!-- END OF SOCIALS -->
+          <button class="action-btn">
             <a href="#projects" class="action-text">View my projects</a>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            <!-- <i class="fas fa-chevron-right" aria-hidden="true"></i> -->
+            <!-- <i class="fas fa-arrow-right icon" aria-hidden="true"></i> -->
+            <i class="fas fa-chevron-right icon" aria-hidden="true"></i>
           </button>
         </div>
+        <div class="illustration-container">
+          <img
+            class="intro-image"
+            src="src/assets/Coding _Monochromatic.svg"
+            alt="A person sitting on a office chair and coding in front of many displays"
+          />
+        </div>
+        <button
+          type="button"
+          class="scrollDown-btn"
+          title="Move to projects section"
+          aria-label="Move to projects section"
+        >
+          <a href="#projects"
+            ><i class="fas fa-chevron-circle-down icon"></i
+          ></a>
+        </button>
+      </section>
+      <!-- END OF HOME -->
+      <div class="divider-section">
+        <i class="fas fa-code icon" aria-hidden="true"></i>
       </div>
-      <div class="illustration-container">
-        <img
-          class="intro-image"
-          src="src/assets/Coding _Monochromatic.svg"
-          alt="A person sitting on a office chair and coding in front of many displays"
-        />
-      </div>
-    </section>
-    <div class="divider-section">
-      <i class="fas fa-code icon" aria-hidden="true"></i>
-    </div>
-    <!-- END OF HOME -->
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="headingContainer">
+      <!-- PROJECTS -->
+      <section id="projects">
+        <!-- <div class="headingContainer"> -->
         <h3 class="title projectsHeading"><span> Recent projects</span></h3>
+        <!-- </div> -->
+        <div class="underline"></div>
+        <div class="projectsContainer">
+          <article class="card">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+              repellat numquam laudantium earum maxime ipsum vero unde,
+              aspernatur beatae iure quas doloremque, delectus non eaque.
+            </p>
+            <div class="link-container">
+              <button
+                title="Go to LIVE project website"
+                aria-label="Go to LIVE project website"
+              >
+                <a href="http://"
+                  >LIVE
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
+                ></a>
+              </button>
+              <button
+                title="Go to GitHub repository"
+                aria-label="Go to GitHub repository"
+              >
+                <a href="http://">
+                  REPO <i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- END OF Projects -->
+      <!-- QA -->
+      <section id="questionsAnswers">
+        <!-- <div class="title"> -->
+        <h2 class="questions-headline">
+          <span class="bg-text">Q&A</span>
+        </h2>
+        <div class="underline"></div>
+        <!-- <h3 class="questions-headline">FAQ</h3> -->
+        <div class="accordion">
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What do you like the most about being a front-end developer?
+            </h4>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>
+                  Front-end web development is an exciting career for me because
+                  it is always evolving and constantly changing. This means I
+                  will always have the opportunity to interact with new tools
+                  and learn new skills.
+                </p>
+                <p>
+                  It is also really rewarding. I build everything the user sees
+                  and interacts with! I am essentially responsible for the users
+                  happiness.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- </div> -->
+        <div class="questions-container">
+          <article class="question">
+            <div class="question-title">
+              <p>Why do you want to be a front-end developer?</p>
+              <p>
+                What do you like the most about being a front-end developer?
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon"
+                  ><i class="fas fa-chevron-down"></i
+                ></span>
+                <span class="minus-icon"
+                  ><i class="awesome fas fa-chevron-up"></i
+                ></span>
+              </button>
+            </div>
+            <div class="question-text">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+                libero ipsa cumque eligendi at, suscipit fugiat exercitationem?
+                Asperiores, natus doloremque?
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- END OF QA -->
+      <!-- SKILLS -->
+      <div id="skills">
+        <h2 class="heading-skills">Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SASS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
       </div>
-      <div class="underline"></div>
-      <div class="projectsContainer">
-        <div class="link-container">
-          <button>
-            <a href="http://"
-              >LIVE <i class="fas fa-external-link-alt" aria-hidden="true"></i
-            ></a>
-          </button>
-          <button>
-            <a href="http://">
-              REPO <i class="fab fa-github" aria-hidden="true"></i
-            ></a>
-          </button>
-        </div>
-      </div>
-      <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </section>
-    <!-- END OF Projects -->
-    <!-- QA -->
-    <section id="questionsAnswers">QA</section>
-    <div class="title">
-      <h2 class="question-headline">
-        <span class="bg-text">Q&A</span>
-      </h2>
-    </div>
-    <section class="section-center">
-      <article class="question">
-        <div class="question-title">
-          <p>Why do you want to be a front-end developer?</p>
-          <button type="button" class="question-btn">
-            <span class="plus-icon"><i class="fas fa-chevron-down"></i></span>
-            <span class="minus-icon"
-              ><i class="awesome fas fa-chevron-up"></i
-            ></span>
-          </button>
-        </div>
-        <div class="question-text">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-            libero ipsa cumque eligendi at, suscipit fugiat exercitationem?
-            Asperiores, natus doloremque?
-          </p>
-        </div>
-      </article>
-    </section>
-    <!-- END OF QA -->
-    <!-- SKILLS -->
-    <div id="skills">
-      <h2 class="heading-skills">Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    </div>
-    <!-- END OF SKILLS -->
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="heading-skills">Contact</h2>
+      <!-- END OF SKILLS -->
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2 class="title contactHeading">
+          <i class="fas fa-envelope icon" aria-hidden="true"></i> Contact
+        </h2>
+        <div class="underline contact"></div>
+        <p>Please let me know if you have any further questions.</p>
+        <p>
+          You can contact me at
+          <strong
+            ><a href="mailto:roose.markus@gmail.com"
+              >roose.markus@gmail.com</a
+            ></strong
+          >
+        </p>
+      </section>
+      <button
+        type="button"
+        title="Scroll Back To Top"
+        aria-label="Scroll back to top"
+        class="scrollTop-btn"
+      >
+        <a
+          class="scroll-up"
+          href="#"
+          title="Scroll Back To Top"
+          aria-label="Scroll back to top"
+          ><i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </button>
+      <!-- END OF CONTACT -->
+    </main>
+    <footer id="footer">
       <p>
-        You can contact me at <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+        &copy; <span id="year">2021</span> | Markus Roose |
+        <i class="fas fa-map-marker-alt icon" aria-hidden="true"></i>Tartu,
+        Estonia
       </p>
-    </section>
-    <!-- END OF CONTACT -->
-    <!-- </main> -->
-    <footer id="footer">&copy;<span id="year">2021</span> | MR</footer>
+    </footer>
     <script src="src/scripts/main.js"></script>
   </body>
 </html>

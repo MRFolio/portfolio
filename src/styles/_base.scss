@@ -4,25 +4,28 @@ $bg-container: #dbe0e2;
 $bg-title: #116914;
 $bg-paragraph: #052d2e;
 $accentColor: #a7f6a7;
-$accentColor: #e970d5;
+$accentColor: #ff0066;
+
+$divider-color: #dfdfdf;
+$underline-color: #abe0e7;
+$qa-bg: #34495e;
+$navList-hover: #35c2fa;
+$max-width: 1140px;
 
 $bg: #242526; /*  #272727  #333  */
 $bg-accent: #484a4d;
 $bg-white: #f8f8ff;
 $main-bg: #1e1645;
 $itemBackground: rgba(30, 31, 83, 0.14);
-$bgColorBtn: #3a7d5c;
+$bgColorBtn: #6068db;
 $btnSecondary: #255d79;
-$max-width: 1140px;
 
 // text
 $font-family-main: 'Open Sans', sans-serif;
-$font-family-title: 'Roboto', sans-serif;
 $font-family-title: 'Lato', sans-serif;
-$font-family-title: 'Open Sans', sans-serif;
+// $font-family-title: 'Open Sans', sans-serif;
 $text-white: #dadce1;
 $text-black: #272727;
-$text-black2: #242526;
 $white: rgb(250, 250, 250);
 
 // border
@@ -42,6 +45,7 @@ $btnShadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
 // shadow
+$accordion-boxShadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $itemBoxShadow: 0px 2px 5px 3px rgb(148, 148, 148);
 $paperBoxShadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -87,6 +91,48 @@ $small-mobile: 400px;
   }
 }
 
+%content-maxWidth {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+//animations '
+%left-right-animation {
+  animation: left-right 1.6s 3 ease-out;
+
+  @keyframes left-right {
+    46% {
+      color: $text-white;
+    }
+    50% {
+      transform: translateX(40%);
+      color: $accentColor;
+    }
+    80% {
+      color: $text-white;
+    }
+  }
+}
+
+%bounce-animation {
+  animation: bounce 1.6s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  @keyframes bounce {
+    50% {
+      transform: scale(1.16);
+    }
+  }
+}
+
+%bounce-down-animation {
+  animation: bounce-down 1.6s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  @keyframes bounce-down {
+    50% {
+      transform: translateY(50%);
+    }
+  }
+}
+
 // resets & consistency
 *,
 *::before,
@@ -100,13 +146,14 @@ html {
   scroll-behavior: smooth;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  // line-height: 1.5;
 }
 
 body {
   font-family: $font-family-main;
+  color: $text-black;
   // color: $text-white;
   // color: $white;
-  // color: black;
   // margin: 0;
 }
 
@@ -131,6 +178,10 @@ a:visited {
 main {
   display: block;
 }
+
+// article {
+//   margin: 0;
+// }
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
