@@ -6,11 +6,22 @@ $bg-paragraph: #052d2e;
 $accentColor: #a7f6a7;
 $accentColor: #ff0066;
 
+// title
+$title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+$title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
+  rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
+
+$header-bg: #111436;
+
 $divider-color: #dfdfdf;
 $underline-color: #abe0e7;
 $qa-bg: #34495e;
 $navList-hover: #35c2fa;
 $max-width: 1140px;
+
+$btn-hover-bg: #ee8888;
+$btn-active-bg: #f05d5d;
 
 $bg: #242526; /*  #272727  #333  */
 $bg-accent: #484a4d;
@@ -50,12 +61,14 @@ $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $itemBoxShadow: 0px 2px 5px 3px rgb(148, 148, 148);
 $paperBoxShadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+$sidebar-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
 // breakpoints
 $extra-large: 1920px;
 $big-screen: 1140px;
 $tablet: 960px;
-$mobile: 600px;
+$mobile: 648px;
 $small-mobile: 400px;
 
 // mixins
@@ -101,15 +114,8 @@ $small-mobile: 400px;
   animation: left-right 1.6s 3 ease-out;
 
   @keyframes left-right {
-    46% {
-      color: $text-white;
-    }
     50% {
-      transform: translateX(40%);
-      color: $accentColor;
-    }
-    80% {
-      color: $text-white;
+      transform: translateX(50%);
     }
   }
 }
@@ -144,6 +150,7 @@ $small-mobile: 400px;
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7vh;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   // line-height: 1.5;

@@ -8,9 +8,9 @@
     <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="MR is a Front-End Developer. A personal portfolio website to showcase completed projects built with React. Contact information, questions and answers section is included as well."
+      content="Markus Roose is a Front-End Developer. A personal portfolio website to showcase completed projects built with React. Learn more about Markus in the Q&A section."
     />
-    <title>Personal portfolio website | MR</title>
+    <title>Portfolio website | Markus Roose</title>
     <link rel="apple-touch-icon" href="src/assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- <link
@@ -56,10 +56,10 @@
           </li>
           <li>
             <a
-              href="#skills"
-              title="Go to skills section"
-              aria-label="Go to skills section"
-              >skills</a
+              href="#questionsAnswers"
+              title="Go to Q&A section"
+              aria-label="Go to Q&A section"
+              >Q&A</a
             >
           </li>
           <li>
@@ -85,10 +85,28 @@
     <aside class="sidebar">
       <nav class="nav">
         <ul class="navList">
-          <li><a href="#home">home</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#skills">skills</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li>
+            <a class="menuLink" href="#home"
+              ><i class="fas fa-home" aria-hidden="true"></i> home</a
+            >
+          </li>
+          <li>
+            <a class="menuLink" href="#projects">
+              <i class="fas fa-briefcase iconTitle" aria-hidden="true"></i>
+              projects</a
+            >
+          </li>
+          <li>
+            <a class="menuLink" href="#questionsAnswers"
+              ><i class="fas fa-question-circle" aria-hidden="true"></i> Q&A</a
+            >
+          </li>
+          <li>
+            <a class="menuLink" href="#contact"
+              ><i class="fas fa-envelope iconTitle" aria-hidden="true"></i>
+              contact</a
+            >
+          </li>
         </ul>
       </nav>
     </aside>
@@ -128,7 +146,7 @@
               </a>
               <span class="circleDivider" aria-hidden="true">&#9679;</span>
             </li>
-            <li class="list-item">
+            <li class="list-item gitHub">
               <a
                 href="https://github.com/MRFolio"
                 class="menu-link"
@@ -152,7 +170,7 @@
         <div class="illustration-container">
           <img
             class="intro-image"
-            src="src/assets/Coding _Monochromatic.svg"
+            src="src/assets/coding-illustration.svg"
             alt="A person sitting on a office chair and coding in front of many displays"
           />
         </div>
@@ -174,7 +192,10 @@
       <!-- PROJECTS -->
       <section id="projects">
         <!-- <div class="headingContainer"> -->
-        <h3 class="title projectsHeading"><span> Recent projects</span></h3>
+        <h3 class="title projectsHeading">
+          <i class="fas fa-briefcase iconTitle" aria-hidden="true"></i
+          ><span> Recent projects</span>
+        </h3>
         <!-- </div> -->
         <div class="underline"></div>
         <div class="projectsContainer">
@@ -204,6 +225,9 @@
               </button>
             </div>
           </article>
+          <article class="card">
+            <img class="img-card" src="/src/assets/home1.png" alt="" />
+          </article>
         </div>
       </section>
       <!-- END OF Projects -->
@@ -211,6 +235,7 @@
       <section id="questionsAnswers">
         <!-- <div class="title"> -->
         <h2 class="questions-headline">
+          <i class="fas fa-question-circle" aria-hidden="true"></i>
           <span class="bg-text">Q&A</span>
         </h2>
         <div class="underline"></div>
@@ -223,15 +248,17 @@
             <div class="accordion-item-body">
               <div class="accordion-item-body-content">
                 <p>
-                  Front-end web development is an exciting career for me because
-                  it is always evolving and constantly changing. This means I
-                  will always have the opportunity to interact with new tools
-                  and learn new skills.
+                  Front-end web development is exciting for me because it is
+                  always evolving and constantly changing. I will continually
+                  have the opportunity to interact with new tools and learn new
+                  skills. I find it really rewarding as well. I build everything
+                  the user sees and interacts with! I am essentially responsible
+                  for the users happiness.
                 </p>
                 <p>
-                  It is also really rewarding. I build everything the user sees
-                  and interacts with! I am essentially responsible for the users
-                  happiness.
+                  I find it really rewarding as well. I build everything the
+                  user sees and interacts with! I am essentially responsible for
+                  the users happiness.
                 </p>
               </div>
             </div>
@@ -245,7 +272,12 @@
               <p>
                 What do you like the most about being a front-end developer?
               </p>
-              <button type="button" class="question-btn">
+              <button
+                type="button"
+                class="question-btn"
+                aria-label="Toggle answer to questions"
+                title="Toggle answer to questions"
+              >
                 <span class="plus-icon"
                   ><i class="fas fa-chevron-down"></i
                 ></span>
@@ -279,19 +311,21 @@
       <!-- END OF SKILLS -->
       <!-- CONTACT -->
       <section id="contact">
-        <h2 class="title contactHeading">
-          <i class="fas fa-envelope icon" aria-hidden="true"></i> Contact
-        </h2>
+        <h3 class="title contactHeading">
+          <i class="fas fa-envelope iconTitle" aria-hidden="true"></i> Contact
+        </h3>
         <div class="underline contact"></div>
-        <p>Please let me know if you have any further questions.</p>
-        <p>
-          You can contact me at
-          <strong
-            ><a href="mailto:roose.markus@gmail.com"
-              >roose.markus@gmail.com</a
-            ></strong
-          >
-        </p>
+        <div class="contact-container">
+          <p>Please let me know if you have any further questions.</p>
+          <p>
+            You can contact me at
+            <strong
+              ><a href="mailto:roose.markus@gmail.com"
+                >roose.markus@gmail.com</a
+              ></strong
+            >
+          </p>
+        </div>
       </section>
       <button
         type="button"

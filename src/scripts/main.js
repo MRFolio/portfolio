@@ -1,31 +1,50 @@
-const yearText = document.getElementById('year');
 const menuBtn = document.querySelector('.hamburger-btn');
-const questions = document.querySelectorAll('.accordion-item-header');
-const question = document.querySelectorAll('.accordion-item');
-const navbar = document.getElementById('header');
-const scrollUpBtn = document.querySelector('.scroll-up');
 const sidebar = document.querySelector('.sidebar');
+const menuLinks = document.querySelectorAll('.menuLink');
+const questions = document.querySelectorAll('.accordion-item-header');
+// const question = document.querySelectorAll('.accordion-item');
+// const navbar = document.getElementById('header');
+const scrollUpBtn = document.querySelector('.scroll-up');
+const yearText = document.getElementById('year');
 
 // sidebar
-if (sidebar.classList.contains('show-sidebar')) {
-  sidebar.addEventListener('click', (e) => {
-    if (e.target !== sidebar) {
-      sidebar.classList.remove('show-sidebar');
-    }
-  });
-  document.addEventListener('keydown', (e) => {
-    e.key === 'Escape' ? sidebar.classList.remove('show-sidebar') : false;
-  });
-}
-
-menuBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('show-sidebar');
-});
-
-// closeBtn.addEventListener('click', () => {
-//   sidebar.classList.remove('show-sidebar');
+// document.addEventListener('click', (e) => {
+//   if (sidebar.classList.contains('show-sidebar')) {
+//     document.addEventListener('click', (e) => {
+//       console.log(e.target, e.currentTarget);
+//       if (e.currentTarget !== sidebar) {
+//         sidebar.classList.remove('show-sidebar');
+//       }
+//     });
+//     document.addEventListener('keydown', (e) => {
+//       e.key === 'Escape' ? sidebar.classList.remove('show-sidebar') : false;
+//     });
+//   }
 // });
 
+// console.log(sidebar.classList.contains('show-sidebar'));
+
+// Hamburger Menu
+const childActiveToggle = (child) => {
+  child.classList.contains('active')
+    ? child.classList.remove('active')
+    : child.classList.add('active');
+};
+
+const toggleSidebar = () => {
+  sidebar.classList.toggle('show-sidebar');
+  [...menuBtn.children].forEach(childActiveToggle);
+};
+
+const addMenuLinksToggleEvent = (link) => {
+  link.addEventListener('click', toggleSidebar);
+};
+
+const handleEscape = (e) => {
+  e.key === 'Escape' ? toggleSidebar() : false;
+};
+
+// Scroll To Top
 const handleScrollToTop = () => {
   const scrollHeight = window.pageYOffset;
 
@@ -73,5 +92,8 @@ questions.forEach((accordionItemHeader) => {
 // year text footer
 yearText.innerHTML = new Date().getFullYear();
 
+menuLinks.forEach(addMenuLinksToggleEvent);
+menuBtn.addEventListener('click', toggleSidebar);
+document.addEventListener('keydown', handleEscape);
 document.addEventListener('scroll', handleScrollToTop);
 // hamburgerBtn.addEventListener('click', handleMenuClick);
