@@ -2,29 +2,10 @@ const menuBtn = document.querySelector('.hamburger-btn');
 const sidebar = document.querySelector('.sidebar');
 const menuLinks = document.querySelectorAll('.menuLink');
 const questions = document.querySelectorAll('.accordion-item-header');
-// const question = document.querySelectorAll('.accordion-item');
-// const navbar = document.getElementById('header');
-const scrollUpBtn = document.querySelector('.scroll-up');
+const scrollUpBtn = document.querySelector('.scroll-top-btn');
 const yearText = document.getElementById('year');
 
-// sidebar
-// document.addEventListener('click', (e) => {
-//   if (sidebar.classList.contains('show-sidebar')) {
-//     document.addEventListener('click', (e) => {
-//       console.log(e.target, e.currentTarget);
-//       if (e.currentTarget !== sidebar) {
-//         sidebar.classList.remove('show-sidebar');
-//       }
-//     });
-//     document.addEventListener('keydown', (e) => {
-//       e.key === 'Escape' ? sidebar.classList.remove('show-sidebar') : false;
-//     });
-//   }
-// });
-
-// console.log(sidebar.classList.contains('show-sidebar'));
-
-// Hamburger Menu
+// Hamburger menu
 const childActiveToggle = (child) => {
   child.classList.contains('active')
     ? child.classList.remove('active')
@@ -41,59 +22,50 @@ const addMenuLinksToggleEvent = (link) => {
 };
 
 const handleEscape = (e) => {
-  e.key === 'Escape' ? toggleSidebar() : false;
+  if (window.innerWidth <= 648) {
+    e.key === 'Escape' ? toggleSidebar() : null;
+  }
 };
 
-// Scroll To Top
+// Scroll to top
 const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const showScrollToTop = () => {
   const scrollHeight = window.pageYOffset;
 
-  scrollHeight > 500
-    ? scrollUpBtn.classList.add('show-goToTop')
-    : scrollUpBtn.classList.remove('show-goToTop');
+  scrollHeight > 650
+    ? scrollUpBtn.classList.add('show-go-to-top')
+    : scrollUpBtn.classList.remove('show-go-to-top');
 };
 
-// accordion
-// const handleAccordionClick = () => {};
-// question.forEach((questio) => {
-//   const btn = question.querySelector('.accordion-item-header');
-//   btn.addEventListener('click', () => {
-//     questions.forEach((item) => {
-//       console.log('tere');
-//       item !== questio ? item.classList.remove('show-text') : false;
-//     });
-//     question.classList.toggle('show-text');
-//   });
-// });
-
-questions.forEach((accordionItemHeader) => {
-  accordionItemHeader.addEventListener('click', (event) => {
-    const currentlyActiveAccordionItemHeader = document.querySelector(
+questions.forEach((question) => {
+  question.addEventListener('click', () => {
+    const currentlyActiveQuestion = document.querySelector(
       '.accordion-item-header.active'
     );
-    if (
-      currentlyActiveAccordionItemHeader &&
-      currentlyActiveAccordionItemHeader !== accordionItemHeader
-    ) {
-      currentlyActiveAccordionItemHeader.classList.toggle('active');
-      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+
+    if (currentlyActiveQuestion && currentlyActiveQuestion !== question) {
+      currentlyActiveQuestion.classList.toggle('active');
+      currentlyActiveQuestion.nextElementSibling.style.maxHeight = 0;
     }
 
-    accordionItemHeader.classList.toggle('active');
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if (accordionItemHeader.classList.contains('active')) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
-    } else {
-      accordionItemBody.style.maxHeight = 0;
-    }
+    question.classList.toggle('active');
+    const answer = question.nextElementSibling;
+
+    question.classList.contains('active')
+      ? (answer.style.maxHeight = answer.scrollHeight + 'px')
+      : (answer.style.maxHeight = 0);
   });
 });
 
-// year text footer
+// Year text footer
 yearText.innerHTML = new Date().getFullYear();
 
+// EventListeners
 menuLinks.forEach(addMenuLinksToggleEvent);
 menuBtn.addEventListener('click', toggleSidebar);
+scrollUpBtn.addEventListener('click', handleScrollToTop);
 document.addEventListener('keydown', handleEscape);
-document.addEventListener('scroll', handleScrollToTop);
-// hamburgerBtn.addEventListener('click', handleMenuClick);
+document.addEventListener('scroll', showScrollToTop);

@@ -1,7 +1,5 @@
 @use "base" as b;
 
-// Components: anything reusable such as buttons, navbars, cards etc.
-
 .title {
   font-weight: 700;
   font-family: b.$font-family-title;
@@ -128,10 +126,9 @@
     font-size: 0.76rem;
     color: rgb(53, 148, 156);
     // color: rgb(72, 191, 202);
-    // color: #5ed7db;
     // color: rgb(39, 128, 116);
     // color: #145d5f;
-    // color: #50bfd3;
+    color: #50bfd3;
     // color: #5ed7db;
     background-color: rgb(149, 184, 187);
     // background-color: rgb(39, 56, 58);
@@ -148,9 +145,7 @@
 }
 
 .divider {
-  height: 1px;
-  margin: 0.5em auto;
-  background-color: b.$divider-color;
+  @extend %content-divider;
   width: 60%;
 
   @include b.mediaQuery(b.$tablet) {
@@ -167,11 +162,14 @@
   background: #2b82d8;
   background: b.$underline-color;
   // background: rgb(181, 211, 211);
-  margin: 1em auto;
+  margin: 1.2em auto;
 
   &.contact {
     background: rgb(171, 224, 231);
+    // background: #2b82d8;
     background: #2b82d8;
+    background: #2e5bee;
+    // background: b.$underline-color;
     // background: rgb(171, 224, 231);
     // background: b.$underline-color;
   }
@@ -180,8 +178,9 @@
 .divider-section {
   height: 1px;
   width: 100%;
-  margin: 1.5em auto;
+  margin: 0em auto 0em;
   background-color: b.$divider-color;
+  background-color: #d8e2f5;
   position: relative;
 
   .icon {
@@ -189,200 +188,209 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1rem;
+    font-size: 0.78rem;
     color: white;
     background-color: rgb(80, 191, 211);
-    padding: 0.64em;
+    background-color: rgb(67, 74, 175);
+    // background-color: rgb(53, 148, 156);
+    padding: 0.6em;
     border-radius: 50%;
     //   background-color: white;
     //   text-shadow: rgb(223, 187, 42) 1px 0 10px;
     box-shadow: white 0px 0px 5px 2px;
     // box-shadow: white 0 0 0 8px;
     z-index: 1;
-
-    &:after {
-      // position: absolute;
-      // content: '';
-      // top: 0;
-      // left: 0;
-      // width: 50%;
-      // background: rgb(180, 41, 115);
-      // z-index: -100;
-      // width: 100%;
-      // height: 100%;
-    }
   }
+
+  //   &:after {
+  //     position: absolute;
+  //     content: '';
+  //     top: 0;
+  //     left: 0;
+  //     width: 50%;
+  //     background: rgb(180, 41, 115);
+  //     z-index: -100;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
 }
 
-.action-btn {
+.intro-action-btn {
+  @extend %main-btn-defaults;
   background: rgb(38, 101, 173);
   // background: #236b9b;
   margin: 0.6em 0;
   padding: 0.7em 1em;
-  border-radius: 0.25em;
   border: 1px solid rgb(70, 107, 192);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  // border: b.$doubleBorder;
-  transition: all 0.3s ease-out;
   font-weight: bold;
-  color: b.$text-white;
-  // color: rgb(47, 47, 47);
   letter-spacing: 0.01em;
-  font-size: 1.12rem;
-  z-index: 10;
-  // border-radius: 50px;
-  // background: #538fd0;
-  // box-shadow: 2px -5px 5px #e4e8ec, -2px 5px 5px #b8b7b7;
-  // border-radius: 50px;
-  // background: linear-gradient(45deg, #4b81bb, #5999df);
-  // box-shadow: 1px 1px 0px #1e4c7e;
-  cursor: pointer;
+  z-index: 1;
 
-  &:hover {
-    background: rgb(38, 101, 173);
-    background: #5ed7db;
-    background: #173c5c;
-    // color: rgb(51, 201, 228);
-  }
-
-  &:focus {
-    outline: 1px solid lightblue;
-  }
-
-  &:active {
-    box-shadow: inset 0px 0px 5px #d8dddf;
-  }
-
-  .action-text {
-    // color: b.$text-white;
+  &:visited {
+    color: b.$text-white;
   }
 
   .icon {
     @extend %left-right-animation;
     font-size: 1rem;
     margin-left: 0.44em;
-    // animation: left-right 1.6s ease-out infinite;
   }
 }
 
-.scrollDown-btn {
+.scrollDown {
   @extend %bounce-down-animation;
   z-index: 11;
   color: b.$main-bg;
+  color: white !important;
   position: absolute;
-  bottom: 2%;
-  left: 48%;
-  background: transparent;
-  border: none;
+  bottom: 1%;
+  left: 47%;
+  padding: 1.2em;
 
   .icon {
     font-size: 1.7rem;
   }
+
+  @include b.mediaQuery(b.$tablet) {
+    left: 46%;
+  }
+
+  @include b.mediaQuery(b.$mobile) {
+    left: 43%;
+  }
 }
 
 .card {
+  @extend %project-container;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  //width: 50vw;
-  // width: 90%;
-  // max-width: 22em;
-  margin: 0 auto;
-  position: relative;
-  padding: 0.5em;
-  $border: 4px;
+  padding: 1em;
+  line-height: 1.5;
   //   color: #fff;
   background: b.$bg-white;
-  background-clip: padding-box;
-  border: solid $border transparent;
-  border-radius: 1em;
-  box-shadow: b.$paperBoxShadow;
-  // siit alates
+  // box-shadow: b.$paperBoxShadow;
+  // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
-  position: relative;
-  z-index: 0;
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  // padding: 2rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    left: -50%;
-    top: -50%;
-    width: 200%;
-    height: 200%;
-    background-color: #399953;
-    background-repeat: no-repeat;
-    background-size: 50% 50%, 50% 50%;
-    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(#399953, #399953),
-      linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
-      linear-gradient(#377af5, #377af5);
-    animation: rotate 20s linear infinite;
+  .card-divider {
+    @extend %content-divider;
+    width: 100%;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 6px;
-    top: 6px;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
-    background: white;
-    border-radius: 5px;
+  .card-title {
+    font-size: 1.5rem;
+    width: 100%;
   }
 
-  @keyframes rotate {
-    100% {
-      transform: rotate(1turn);
+  .sub-title {
+    font-size: 1rem;
+    margin-bottom: 0.3em;
+    // text-align: left;
+  }
+
+  p > a {
+    color: rgb(26, 100, 238);
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: rgb(15, 37, 228);
+      text-decoration: underline;
     }
   }
 
-  // siit lõppeb
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: -1;
-  //   margin: -$border;
-  //   border-radius: inherit;
-  //   background: linear-gradient(to right, red, orange);
-  // }
+  .tech-container {
+    width: 100%;
+
+    .tech-list {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5em;
+
+      > li {
+        padding: 0.4em 0.6em;
+        background: rgb(27, 113, 149);
+        color: white;
+        border-radius: 0.2em;
+        // margin: 0.12em 0.25em;
+      }
+    }
+  }
+
+  .link-container {
+    width: 100%;
+    margin-top: 0.36em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-content: center;
+    flex-flow: row no-wrap;
+    gap: 2em;
+    text-align: center;
+
+    @include b.mediaQuery(b.$mobile) {
+      gap: 1.2em;
+    }
+
+    .btn {
+      @extend %main-btn-defaults;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      padding: 0.5em 1em;
+      padding: 0.6em 0.8em;
+      width: 100%;
+      background: rgb(27, 113, 149);
+    }
+  }
+}
+
+.project-image-container {
+  // @extend %project-container;
+
+  .project-image {
+    border-radius: 0.28em;
+    object-fit: contain;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .accordion {
   @extend %content-maxWidth;
-  //   max-width: b.$max-width;
-  //   margin: 2em auto;
-  margin-top: 1em;
   width: 90%;
 
+  @include b.mediaQuery(b.$mobile) {
+    width: 100%;
+  }
+
   .accordion-item {
-    background-color: #fff;
-    color: #111;
-    // margin: 1em 0;
-    border-radius: 0.35rem;
+    background-color: white;
+    max-width: 788px;
+    margin: 0.75em auto;
+    border-radius: 0.32em;
     box-shadow: b.$accordion-boxShadow;
   }
 
   .accordion-item-header {
-    padding: 0.5em 3em 0.5em 1em;
+    padding: 1em 3em 1em 1em;
     min-height: 3.5em;
-    // line-height: 1.15em;
+    line-height: 1.5;
     font-weight: bold;
     display: flex;
     align-items: center;
     position: relative;
     cursor: pointer;
+    border-radius: 0.32em;
+    transition: box-shadow 0.35s ease-out;
+
+    &:hover {
+      box-shadow: 0px 0px 4px 1px grey;
+    }
 
     &:after {
       content: '\002B';
@@ -404,56 +412,55 @@
 
   .accordion-item-body-content {
     padding: 1em;
-    line-height: 1.5em;
+    line-height: 1.5;
     border-top: 1px solid;
-    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+    border-image: linear-gradient(to right, #34495e, #72a8af, #34495e) 1;
+
     > p:first-child {
-      margin-bottom: 0.5em;
+      // margin-bottom: 0.5em;
+      // white-space: pre-line;
     }
   }
 }
 
-.scrollTop-btn {
-  position: fixed;
-}
-
-.scroll-up {
+.scroll-top-btn {
   @extend %bounce-animation;
-  font-size: 1.25rem;
   position: fixed;
+  font-size: 1.4rem;
   bottom: 1em;
   right: 1em;
-  width: 2em;
-  height: 2em;
-  background: rgb(238, 118, 118);
-  background: rgb(236, 95, 95);
-  display: grid;
-  place-items: center;
-  border-radius: 0.25em;
-  color: white !important;
-  visibility: hidden;
+  width: 1.85em;
+  height: 1.85em;
+  border: none;
+  border-radius: 50%;
+  background: #fd665c;
+  color: white;
   z-index: 10;
-  // transition: color 0.3s ease-out;
-  transition: background 0.3s ease-out;
-  // box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  transition: all 0.35s ease-out;
+  visibility: hidden;
+  cursor: pointer;
+
+  &.show-go-to-top {
+    visibility: visible;
+    z-index: 12;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgb(250, 130, 130);
+  }
 
   &:hover {
-    background: rgb(240, 114, 114);
+    // background: rgb(250, 208, 208);
+    box-shadow: 0 0 1px 2px rgb(250, 130, 130);
   }
 
   &:active {
-    background: rgb(231, 57, 57);
+    background: rgb(253, 76, 76);
   }
 
   @include b.mediaQuery(b.$mobile) {
-    font-size: 1rem;
-    bottom: 0.9em;
-    right: 0.65em;
-    // width: 1.5em;
-    // height: 1.5em;
+    font-size: 1.3rem;
+    bottom: 0.55em;
+    right: 0.55em;
   }
-}
-.show-goToTop {
-  visibility: visible;
-  z-index: 12;
 }

@@ -18,7 +18,7 @@
       rel="stylesheet"
     /> -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&family=Lato:wght@400;700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700;800&family=Poppins:wght@400;700&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Luckiest+Guy&family=Fredoka+One&family=Roboto:wght@900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,7 +34,9 @@
       <div class="header-left">
         <i class="fas fa-code icon" aria-hidden="true"></i>
         <!-- <h1 class="title website-heading">Markus<span>Roose</span> portfolio </h1> -->
-        <h1 class="title website-heading">M<span>Roose</span> portfolio</h1>
+        <h1 class="title website-heading">
+          M<span>Roose</span><span class="portfolio">portfolio</span>
+        </h1>
       </div>
       <nav class="nav">
         <ul class="navList">
@@ -148,12 +150,13 @@
             </li>
             <li class="list-item gitHub">
               <a
+                target="_blank"
                 href="https://github.com/MRFolio"
                 class="menu-link"
                 title="Markus Roose GitHub"
                 aria-label="Markus Roose GitHub"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 ><i class="fab fa-github" aria-hidden="true"></i
                 ><span>GitHub</span>
               </a>
@@ -161,11 +164,10 @@
           </ul>
           <div class="divider"></div>
           <!-- END OF SOCIALS -->
-          <button class="action-btn">
-            <a href="#projects" class="action-text">View my projects</a>
-            <!-- <i class="fas fa-arrow-right icon" aria-hidden="true"></i> -->
-            <i class="fas fa-chevron-right icon" aria-hidden="true"></i>
-          </button>
+          <a href="#projects" class="intro-action-btn"
+            >View my projects
+            <i class="fas fa-chevron-right icon" aria-hidden="true"></i
+          ></a>
         </div>
         <div class="illustration-container">
           <img
@@ -174,21 +176,18 @@
             alt="A person sitting on a office chair and coding in front of many displays"
           />
         </div>
-        <button
-          type="button"
-          class="scrollDown-btn"
+        <a
+          class="scrollDown"
+          href="#projects"
           title="Move to projects section"
           aria-label="Move to projects section"
-        >
-          <a href="#projects"
-            ><i class="fas fa-chevron-circle-down icon"></i
-          ></a>
-        </button>
+          ><i class="fas fa-chevron-circle-down icon"></i
+        ></a>
       </section>
       <!-- END OF HOME -->
-      <div class="divider-section">
+      <!-- <div class="divider-section">
         <i class="fas fa-code icon" aria-hidden="true"></i>
-      </div>
+      </div> -->
       <!-- PROJECTS -->
       <section id="projects">
         <!-- <div class="headingContainer"> -->
@@ -200,46 +199,86 @@
         <div class="underline"></div>
         <div class="projectsContainer">
           <article class="card">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
-              repellat numquam laudantium earum maxime ipsum vero unde,
-              aspernatur beatae iure quas doloremque, delectus non eaque.
-            </p>
+            <h5 class="title card-title">Recipes app</h5>
+            <div class="divider card-divider"></div>
+            <div class="motivation-container">
+              <h6 class="title sub-title">Description:</h6>
+              <p>
+                Users can search and browse for recipes from a wide array of
+                food categories. Detailed information about each particular
+                recipe with ingredients, instructions, images, videos, articles
+                is included. Possibility to add recipes to favorites and store
+                it for later use.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="motivation-container">
+              <h6 class="title sub-title">Motivation:</h6>
+              <p>
+                The main motivation with this project was to try out Typescript.
+                I felt that the overall complexity level was just right to do
+                so. I decided to use Redux Toolkit for the first time as well. I
+                also knew I wanted make a project related to food and I found
+                <a
+                  href="https://www.themealdb.com/api.php"
+                  title="TheMealDB homepage"
+                  >TheMealDB API</a
+                >
+                that fit the bill almost perfectly.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="tech-container">
+              <h6 class="title sub-title">Technologies used:</h6>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>Redux</li>
+                <li>React Router</li>
+                <li>SCSS</li>
+                <li>Framer-Motion</li>
+              </ul>
+            </div>
+            <div class="divider card-divider"></div>
             <div class="link-container">
-              <button
+              <a
+                class="btn demo-btn"
                 title="Go to LIVE project website"
                 aria-label="Go to LIVE project website"
-              >
-                <a href="http://"
-                  >LIVE
-                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
-                ></a>
-              </button>
-              <button
+                href="https://recipes-app-mr.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >DEMO <i class="fas fa-external-link-alt" aria-hidden="true"></i
+              ></a>
+              <a
+                class="btn repo-btn"
                 title="Go to GitHub repository"
                 aria-label="Go to GitHub repository"
+                href="https://github.com/MRFolio/recipes-app"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a href="http://">
-                  REPO <i class="fab fa-github" aria-hidden="true"></i
-                ></a>
-              </button>
+                REPO <i class="fab fa-github" aria-hidden="true"></i
+              ></a>
             </div>
           </article>
-          <article class="card">
-            <img class="img-card" src="/src/assets/home1.png" alt="" />
-          </article>
+          <div class="project-image-container">
+            <img
+              class="project-image"
+              src="/src/assets/categoryMeals.png"
+              alt=""
+            />
+          </div>
         </div>
       </section>
       <!-- END OF Projects -->
       <!-- QA -->
       <section id="questionsAnswers">
         <!-- <div class="title"> -->
-        <h2 class="questions-headline">
+        <h3 class="questions-headline">
           <i class="fas fa-question-circle" aria-hidden="true"></i>
           <span class="bg-text">Q&A</span>
-        </h2>
+        </h3>
         <div class="underline"></div>
-        <!-- <h3 class="questions-headline">FAQ</h3> -->
         <div class="accordion">
           <article class="accordion-item">
             <h4 class="accordion-item-header">
@@ -251,9 +290,7 @@
                   Front-end web development is exciting for me because it is
                   always evolving and constantly changing. I will continually
                   have the opportunity to interact with new tools and learn new
-                  skills. I find it really rewarding as well. I build everything
-                  the user sees and interacts with! I am essentially responsible
-                  for the users happiness.
+                  skills.
                 </p>
                 <p>
                   I find it really rewarding as well. I build everything the
@@ -263,52 +300,23 @@
               </div>
             </div>
           </article>
-        </div>
-        <!-- </div> -->
-        <div class="questions-container">
-          <article class="question">
-            <div class="question-title">
-              <p>Why do you want to be a front-end developer?</p>
-              <p>
-                What do you like the most about being a front-end developer?
-              </p>
-              <button
-                type="button"
-                class="question-btn"
-                aria-label="Toggle answer to questions"
-                title="Toggle answer to questions"
-              >
-                <span class="plus-icon"
-                  ><i class="fas fa-chevron-down"></i
-                ></span>
-                <span class="minus-icon"
-                  ><i class="awesome fas fa-chevron-up"></i
-                ></span>
-              </button>
-            </div>
-            <div class="question-text">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-                libero ipsa cumque eligendi at, suscipit fugiat exercitationem?
-                Asperiores, natus doloremque?
-              </p>
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">What is my motto in life?</h4>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>
+                  If I'm the smartest person in the room, then I'm definitely in
+                  the wrong room.
+                </p>
+              </div>
             </div>
           </article>
         </div>
       </section>
       <!-- END OF QA -->
-      <!-- SKILLS -->
-      <div id="skills">
-        <h2 class="heading-skills">Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-        </ul>
-      </div>
-      <!-- END OF SKILLS -->
+      <!-- <div class="divider-section">
+        <i class="fas fa-code icon" aria-hidden="true"></i>
+      </div> -->
       <!-- CONTACT -->
       <section id="contact">
         <h3 class="title contactHeading">
@@ -327,22 +335,17 @@
           </p>
         </div>
       </section>
-      <button
-        type="button"
-        title="Scroll Back To Top"
-        aria-label="Scroll back to top"
-        class="scrollTop-btn"
-      >
-        <a
-          class="scroll-up"
-          href="#"
-          title="Scroll Back To Top"
-          aria-label="Scroll back to top"
-          ><i class="fas fa-arrow-up" aria-hidden="true"></i>
-        </a>
-      </button>
       <!-- END OF CONTACT -->
     </main>
+    <button
+      type="button"
+      title="Scroll back to top"
+      aria-label="Scroll back to top"
+      class="scroll-top-btn"
+    >
+      <!-- <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> -->
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
     <footer id="footer">
       <p>
         &copy; <span id="year">2021</span> | Markus Roose |
