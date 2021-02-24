@@ -1,13 +1,12 @@
 // main variables
-$bg-main: #116914;
-$bg-container: #dbe0e2;
-$bg-title: #116914;
-$bg-paragraph: #052d2e;
-$accentColor: #a7f6a7;
 $accentColor: #ff0066;
 // $accentColor2: #ff4d94;
 
 // title
+$title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
+  rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
+$title-shadow-main: #adc8fa 0px 0px 0px 2px inset,
+  rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
 $title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
   rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 $title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
@@ -48,10 +47,6 @@ $doubleBorder: 4px double rgb(198, 200, 198);
 
 // btn variables
 $btnText: rgb(246, 245, 245);
-$btnBg: #116914;
-$btnBorder: 4px double #b7d5d4;
-$btnHoverBg: #178c1b;
-$btnTransition: background 0.4s ease-out;
 $btnShadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
@@ -82,7 +77,6 @@ $small-mobile: 400px;
 
 %main-btn-defaults {
   color: $text-white;
-  // color: rgb(245, 245, 245);
   font-size: 1.12rem;
   border-radius: 0.25em;
   border: 1px solid rgb(70, 107, 192);
@@ -110,9 +104,23 @@ $small-mobile: 400px;
   background-color: $divider-color;
 }
 
+%divider-base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.37em;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  font-size: 0.76rem;
+}
+
 %project-container {
   border-radius: 0.28em;
   box-shadow: $project-shadow;
+
+  // @include mediaQuery($mobile) {
+  //   border-radius: 0 0 0.28em 0.28em;
+  // }
 }
 
 //animations '

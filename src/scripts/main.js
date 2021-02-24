@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector('.hamburger-btn');
-const sidebar = document.querySelector('.sidebar');
+const sidebar = document.getElementById('sidebar');
 const menuLinks = document.querySelectorAll('.menuLink');
 const questions = document.querySelectorAll('.accordion-item-header');
 const scrollUpBtn = document.querySelector('.scroll-top-btn');
@@ -7,19 +7,35 @@ const yearText = document.getElementById('year');
 
 // Hamburger menu
 const childActiveToggle = (child) => {
-  child.classList.contains('active')
-    ? child.classList.remove('active')
-    : child.classList.add('active');
+  child.classList.toggle('active');
+};
+
+const menuBtnIconToggle = () => {
+  [...menuBtn.children].forEach(childActiveToggle);
 };
 
 const toggleSidebar = () => {
   sidebar.classList.toggle('show-sidebar');
-  [...menuBtn.children].forEach(childActiveToggle);
+  menuBtnIconToggle();
+};
+
+const handleLinkClick = () => {
+  sidebar.classList.remove('show-sidebar');
+  menuBtnIconToggle();
 };
 
 const addMenuLinksToggleEvent = (link) => {
-  link.addEventListener('click', toggleSidebar);
+  link.addEventListener('click', handleLinkClick);
 };
+
+// const handleOutsideClickClose = (e) => {
+//   e.target !== sidebar &&
+//   e.target.parentNode !== sidebar &&
+//   e.target.parentNode !== menuBtn &&
+//   e.target !== menuBtn
+//     ? handleLinkClick()
+//     : null;
+// };
 
 const handleEscape = (e) => {
   if (window.innerWidth <= 648) {
@@ -69,3 +85,4 @@ menuBtn.addEventListener('click', toggleSidebar);
 scrollUpBtn.addEventListener('click', handleScrollToTop);
 document.addEventListener('keydown', handleEscape);
 document.addEventListener('scroll', showScrollToTop);
+// document.addEventListener('mouseup', handleOutsideClickClose);

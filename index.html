@@ -18,7 +18,7 @@
       rel="stylesheet"
     /> -->
     <link
-      href="https://fonts.googleapis.com/css2?&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Luckiest+Guy&family=Fredoka+One&family=Roboto:wght@900&display=swap"
+      href="https://fonts.googleapis.com/css2?&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Luckiest+Guy&family=Fredoka+One&family=Roboto:wght@900&family=Codystar&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
     <link
@@ -33,7 +33,6 @@
     <header id="header">
       <div class="header-left">
         <i class="fas fa-code icon" aria-hidden="true"></i>
-        <!-- <h1 class="title website-heading">Markus<span>Roose</span> portfolio </h1> -->
         <h1 class="title website-heading">
           M<span>Roose</span><span class="portfolio">portfolio</span>
         </h1>
@@ -84,7 +83,7 @@
         <i class="fas fa-times"></i>
       </button>
     </header>
-    <aside class="sidebar">
+    <aside id="sidebar" class="sidebar">
       <nav class="nav">
         <ul class="navList">
           <li>
@@ -140,7 +139,7 @@
             <li class="list-item">
               <a
                 href="mailto:roose.markus@gmail.com"
-                class="menu-link"
+                class="menu-link email"
                 title="Markus Roose email"
                 aria-label="Markus Roose email"
                 ><i class="fas fa-envelope" aria-hidden="true"></i
@@ -148,11 +147,11 @@
               </a>
               <span class="circleDivider" aria-hidden="true">&#9679;</span>
             </li>
-            <li class="list-item gitHub">
+            <li class="list-item">
               <a
                 target="_blank"
                 href="https://github.com/MRFolio"
-                class="menu-link"
+                class="menu-link github"
                 title="Markus Roose GitHub"
                 aria-label="Markus Roose GitHub"
                 target="_blank"
@@ -177,7 +176,7 @@
           />
         </div>
         <a
-          class="scrollDown"
+          id="scroll-down"
           href="#projects"
           title="Move to projects section"
           aria-label="Move to projects section"
@@ -190,18 +189,134 @@
       </div> -->
       <!-- PROJECTS -->
       <section id="projects">
-        <!-- <div class="headingContainer"> -->
         <h3 class="title projectsHeading">
           <i class="fas fa-briefcase iconTitle" aria-hidden="true"></i
           ><span> Recent projects</span>
         </h3>
-        <!-- </div> -->
         <div class="underline"></div>
-        <div class="projectsContainer">
-          <article class="card">
+        <!-- Single Item -->
+        <article class="project-item-container">
+          <div class="card">
+            <h5 class="title card-title">E-Commerce site</h5>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Description:</h6>
+              <p>
+                Users can search and browse for products they might want to buy
+                from 4 different categories. They can sort or filter products
+                depending on the price or category, and add or remove products
+                to cart. The checkout includes a billing information form and an
+                order summary as the final step.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Motivation:</h6>
+              <p>
+                The main motivation was to try out and learn both Redux and
+                Material-UI. I wanted to make an e-commerce project and found
+                <a href="https://opentdb.com/" title="Fake Store API homepage"
+                  >Fake Store API</a
+                >
+                to fetch data from. I knew state management is an important
+                aspect of an e-commerce site, so Redux was an easy choice. I had
+                never used an UI framework before, but after some research I
+                realized I cannot go wrong by choosing Material-UI.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Challenges I faced:</h6>
+              <p>
+                I used Redux for the first time and it was quite intimidating at
+                first. It was difficult to wrap my head around all the
+                boilerplate code necessary to even start doing something, but
+                eventually it did start to make sense. Due to my unfamiliarity
+                with Redux, even simple tasks took a while to implement, but I
+                got there at the end, and saved myself an immense amount of prop
+                drilling.
+              </p>
+              <p class="second-paragraph">
+                I had never worked with a styling/UI framework before either. It
+                felt strange not having to build everything from scratch. It
+                took some time to familiarize with the Material-UI documentation
+                and endless list of possibilities regarding each separate
+                component. I quickly learned that one of the most challenging
+                parts is to customize a component exactly the way I want to.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="tech-container">
+              <h6 class="title sub-title">Technologies used:</h6>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Material-UI</li>
+                <li>React Router</li>
+              </ul>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="links-container">
+              <h6 class="title sub-title">Links:</h6>
+              <a
+                class="btn demo-btn"
+                title="Go to LIVE project website"
+                aria-label="Go to e-commerce project LIVE website"
+                href="https://e-commerce-mr.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >DEMO &nbsp;<i
+                  class="fas fa-external-link-alt"
+                  aria-hidden="true"
+                ></i
+              ></a>
+              <a
+                class="btn repo-btn"
+                title="Go to GitHub repository"
+                aria-label="Go to e-commerce project GitHub repository"
+                href="https://github.com/MRFolio/E-Commerce-site"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CODE &nbsp;<i class="fab fa-github" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-image-container">
+            <img
+              class="project-image"
+              src="/src/assets/e-commerce1.png"
+              alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
+            />
+            <img
+              class="project-image"
+              src="/src/assets/e-commerce2.png"
+              alt="Screencapture of the deployed E-Commerce project cart page. User can add or remove products."
+            />
+          </div>
+        </article>
+        <!-- END of Single Item -->
+        <div class="divider-section">
+          <i class="fas fa-code icon" aria-hidden="true"></i>
+        </div>
+        <!-- Single Item -->
+        <article class="project-item-container">
+          <div class="project-image-container">
+            <img
+              class="project-image"
+              src="/src/assets/recipes2.png"
+              alt="Screenshot of the Seafoods category meals page"
+            />
+            <img
+              class="project-image"
+              src="/src/assets/recipes3.png"
+              alt="Screencapture of the deployed Recipe project recipe page. User can view detailed information about the chosen recipe"
+            />
+          </div>
+          <div class="card">
             <h5 class="title card-title">Recipes app</h5>
             <div class="divider card-divider"></div>
-            <div class="motivation-container">
+            <div class="card-text-container">
               <h6 class="title sub-title">Description:</h6>
               <p>
                 Users can search and browse for recipes from a wide array of
@@ -212,19 +327,38 @@
               </p>
             </div>
             <div class="divider card-divider"></div>
-            <div class="motivation-container">
+            <div class="card-text-container">
               <h6 class="title sub-title">Motivation:</h6>
               <p>
-                The main motivation with this project was to try out Typescript.
-                I felt that the overall complexity level was just right to do
-                so. I decided to use Redux Toolkit for the first time as well. I
-                also knew I wanted make a project related to food and I found
+                The main motivation was to learn Typescript. I felt that the
+                overall complexity level of the project was just right to try
+                out TS. I decided to use Redux Toolkit for the first time as
+                well. I wanted to make a project related to food, and I found
                 <a
                   href="https://www.themealdb.com/api.php"
                   title="TheMealDB homepage"
                   >TheMealDB API</a
                 >
-                that fit the bill almost perfectly.
+                that fit the bill for my data requirements almost perfectly.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Challenges faced:</h6>
+              <p>
+                Biggest hurdle was in the beginning with all the setup, and
+                getting accustomed to writing everything in TypeScript (TS). I
+                got constantly screamed at by long-winded TS errors which was
+                rather intimidating at first. For educational purposes, I tried
+                to steer away from using any types to ease out of trouble. Even
+                simple tasks became quite time consuming.
+              </p>
+              <p class="second-paragraph">
+                TS did start to grow on me as I got more accustomed to thinking
+                on that level, and I particularly liked the IntelliSense aspect
+                of it. I know more practice is needed for me to be fully
+                comfortable with TS, but I am glad I chose to take the first
+                step.
               </p>
             </div>
             <div class="divider card-divider"></div>
@@ -232,22 +366,27 @@
               <h6 class="title sub-title">Technologies used:</h6>
               <ul class="tech-list">
                 <li>React</li>
+                <li>TypeScript</li>
+                <li>SCSS</li>
                 <li>Redux</li>
                 <li>React Router</li>
-                <li>SCSS</li>
-                <li>Framer-Motion</li>
+                <li>Framer Motion</li>
               </ul>
             </div>
             <div class="divider card-divider"></div>
-            <div class="link-container">
+            <div class="links-container">
+              <h6 class="title sub-title">Links:</h6>
               <a
                 class="btn demo-btn"
                 title="Go to LIVE project website"
-                aria-label="Go to LIVE project website"
+                aria-label="Go to LIVE recipes app project website"
                 href="https://recipes-app-mr.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >DEMO <i class="fas fa-external-link-alt" aria-hidden="true"></i
+                >DEMO &nbsp;<i
+                  class="fas fa-external-link-alt"
+                  aria-hidden="true"
+                ></i
               ></a>
               <a
                 class="btn repo-btn"
@@ -257,32 +396,244 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                REPO <i class="fab fa-github" aria-hidden="true"></i
+                CODE &nbsp;<i class="fab fa-github" aria-hidden="true"></i
               ></a>
             </div>
-          </article>
+          </div>
+        </article>
+        <!-- END of Single Item -->
+        <div class="divider-section">
+          <i class="fas fa-code icon" aria-hidden="true"></i>
+        </div>
+        <!-- Single Item -->
+        <article class="project-item-container">
+          <div class="card">
+            <h5 class="title card-title">Quiz app</h5>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Description:</h6>
+              <p>
+                Users can generate their own custom quiz and play it. They can
+                choose the number of questions, category and difficulty level. A
+                result screen is shown at the end of the quiz with a chance to
+                review the answers.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Motivation:</h6>
+              <p>
+                Before I started the project I felt like I needed to solidify
+                the fundamental skills in React and JavaScript in general to
+                feel more comfortable with them. A quiz app seemed a good option
+                do to that. It gave me the possibility to use React Router for
+                the first time and I also wanted to add animations to my
+                project. I found
+                <a
+                  href="https://opentdb.com/"
+                  title="Open Trivia Database homepage"
+                  >Open Trivia Database API</a
+                >
+                to supply my app with data.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Challenges I faced:</h6>
+              <p>
+                One particular challenging part was when I wanted to
+                simultaneously fetch data and redirect the user to a new page
+                after a button click. Initially, I only managed to make one of
+                the two to successfully work. The solution was to use React
+                Router useHistory hook and the push method. I had to add the
+                state which included the fetched questions data as an additional
+                parameter
+                <span class="code-text"
+                  >&nbsp; history.push({ pathname: '/questions', state: {
+                  questions } }); </span
+                >.
+              </p>
+              <p class="second-paragraph">
+                I had never worked with an animations library before, so getting
+                accustomed to Framer Motion was also an interesting learning
+                experience. The documentation is quite extensive and there are a
+                lot of options to choose from. It was time consuming to find
+                exactly what I needed. I learned that tweaking animations to
+                just feel right can be a never ending task.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="tech-container">
+              <h6 class="title sub-title">Technologies used:</h6>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>SCSS</li>
+                <li>React Router</li>
+                <li>Framer Motion</li>
+              </ul>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="links-container">
+              <h6 class="title sub-title">Links:</h6>
+              <a
+                class="btn demo-btn"
+                title="Go to LIVE project website"
+                aria-label="Go to LIVE project website"
+                href="https://quiz-app-mr.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >DEMO &nbsp;<i
+                  class="fas fa-external-link-alt"
+                  aria-hidden="true"
+                ></i
+              ></a>
+              <a
+                class="btn repo-btn"
+                title="Go to GitHub repository"
+                aria-label="Go to GitHub repository"
+                href="https://github.com/MRFolio/quiz-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CODE &nbsp;<i class="fab fa-github" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
           <div class="project-image-container">
             <img
-              class="project-image"
-              src="/src/assets/categoryMeals.png"
-              alt=""
+              class="project-image solo"
+              src="/src/assets/quiz2.png"
+              alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
+            />
+            <!-- <img class="project-image" src="/src/assets/quiz4.png" alt="" /> -->
+          </div>
+        </article>
+        <!-- END of Single Item -->
+        <div class="divider-section">
+          <i class="fas fa-code icon" aria-hidden="true"></i>
+        </div>
+        <!-- Single Item -->
+        <article class="project-item-container">
+          <div class="project-image-container">
+            <img
+              class="project-image solo"
+              src="/src/assets/wind_turbines.png"
+              alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
             />
           </div>
-        </div>
+          <div class="card">
+            <h5 class="title card-title">Wind Turbines Tracker</h5>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Description:</h6>
+              <p>
+                Web app locating wind turbines in Alaska. Users can find
+                detailed information about each wind turbine by clicking on the
+                icon on the map. There is an option to copy coordinates to
+                clipboard as well. The map title includes an overview of all the
+                wind turbines in the region.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Motivation:</h6>
+              <p>
+                I have always loved working with maps, and I knew I wanted to
+                make a project using Google Maps API. Therefore, I searched for
+                interesting data to build my app around. I eventually found wind
+                turbines data from
+                <a
+                  href="https://www.usgs.gov/products/data-and-tools/apis"
+                  title="U.S. Geological Survey API homepage"
+                  >U.S. Geological Survey API</a
+                >
+                which seemed compelling enough.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="card-text-container">
+              <h6 class="title sub-title">Challenges faced:</h6>
+              <p>
+                In the beginning the main challenge was to find data which had
+                geographical coordinates included in the dataset. Later on, I
+                realized that there was a lot of data missing. I had to start
+                filling in the gaps to make the app look more presentable.
+              </p>
+              <p class="second-paragraph">
+                This was the first bigger React project I had done, and that
+                brought up many challenges in itself. Integrating React with
+                Google Maps API was the main one. I had a difficult time finding
+                exactly what I needed from the extensive Google Maps API
+                documentation.
+              </p>
+              <p class="second-paragraph">
+                Also, I did not really know how to exactly implement most of the
+                things in React. I started to focus on smaller sections of demo
+                code to get a better understanding what is going on, and
+                eventually it started to make more sense.
+              </p>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="tech-container">
+              <h6 class="title sub-title">Technologies used:</h6>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>SCSS</li>
+                <li>React Google Maps API</li>
+              </ul>
+            </div>
+            <div class="divider card-divider"></div>
+            <div class="links-container">
+              <h6 class="title sub-title">Links:</h6>
+              <a
+                class="btn demo-btn"
+                title="Go to LIVE project website"
+                aria-label="Go to LIVE project website"
+                href="https://alaska-wind-turbines.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >DEMO &nbsp;<i
+                  class="fas fa-external-link-alt"
+                  aria-hidden="true"
+                ></i
+              ></a>
+              <a
+                class="btn repo-btn"
+                title="Go to GitHub repository"
+                aria-label="Go to GitHub repository"
+                href="https://github.com/MRFolio/wind-turbines-tracker"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CODE &nbsp;<i class="fab fa-github" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </article>
+        <!-- END of Single Item -->
       </section>
-      <!-- END OF Projects -->
+      <!-- END of Projects -->
       <!-- QA -->
       <section id="questionsAnswers">
-        <!-- <div class="title"> -->
         <h3 class="questions-headline">
           <i class="fas fa-question-circle" aria-hidden="true"></i>
           <span class="bg-text">Q&A</span>
         </h3>
-        <div class="underline"></div>
+        <div class="underline bright"></div>
         <div class="accordion">
           <article class="accordion-item">
             <h4 class="accordion-item-header">
-              What do you like the most about being a front-end developer?
+              When did I start learning web development?
+            </h4>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>June 2020.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What do I like the most about being a front-end developer?
             </h4>
             <div class="accordion-item-body">
               <div class="accordion-item-body-content">
@@ -293,8 +644,8 @@
                   skills.
                 </p>
                 <p>
-                  I find it really rewarding as well. I build everything the
-                  user sees and interacts with! I am essentially responsible for
+                  I just find it really rewarding. I build everything the user
+                  sees and interacts with, so I am essentially responsible for
                   the users happiness.
                 </p>
               </div>
@@ -343,7 +694,6 @@
       aria-label="Scroll back to top"
       class="scroll-top-btn"
     >
-      <!-- <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> -->
       <i class="fa fa-chevron-up" aria-hidden="true"></i>
     </button>
     <footer id="footer">
