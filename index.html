@@ -8,17 +8,13 @@
     <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="Markus Roose is a Front-End Developer. A personal portfolio website to showcase completed projects built with React. Learn more about Markus in the Q&A section."
+      content="Markus Roose is a Front-End Developer. A personal portfolio website to showcase recent projects built with React. Learn more about Markus in the Q&A section."
     />
     <title>Portfolio website | Markus Roose</title>
     <link rel="apple-touch-icon" href="src/assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Roboto:wght@700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <link
-      href="https://fonts.googleapis.com/css2?&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Luckiest+Guy&family=Fredoka+One&family=Roboto:wght@900&family=Codystar&family=Rock+Salt&display=swap"
+      href="https://fonts.googleapis.com/css2?&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Codystar&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
     <link
@@ -79,8 +75,8 @@
         aria-label="Toggle navigation menu"
         title="Toggle navigation menu"
       >
-        <i class="fas fa-bars active" aria-hidden="true"></i>
-        <i class="fas fa-times"></i>
+        <i class="fas fa-bars" aria-hidden="true"></i>
+        <i class="fas fa-times" aria-hidden="true"></i>
       </button>
     </header>
     <aside id="sidebar" class="sidebar">
@@ -119,20 +115,7 @@
           <div class="divider-intro">
             <i class="fas fa-code icon" aria-hidden="true"></i>
           </div>
-          <!-- <div class="divider-section">
-          <i class="fas fa-code icon" aria-hidden="true"></i>
-        </div> -->
-          <!-- <h2 class="title position">
-          <span class="bracket"><</span>Front-End Developer
-          <span class="bracket">/></span>
-        </h2> -->
           <h2 class="title job-position">Front-End Developer</h2>
-          <!-- <div class="divider"></div> -->
-          <!-- <p class="intro-text">
-          I like to create eye-catching visuals and focus on the smallest
-          details of product features. Slick visuals and smooth animations are
-          my thing.
-        </p> -->
           <div class="divider"></div>
           <!-- SOCIALS -->
           <ul class="social-list">
@@ -184,9 +167,6 @@
         ></a>
       </section>
       <!-- END OF HOME -->
-      <!-- <div class="divider-section">
-        <i class="fas fa-code icon" aria-hidden="true"></i>
-      </div> -->
       <!-- PROJECTS -->
       <section id="projects">
         <h3 class="title projectsHeading">
@@ -197,46 +177,57 @@
         <!-- Single Item -->
         <article class="project-item-container">
           <div class="card">
-            <h5 class="title card-title">E-Commerce site</h5>
+            <h4 class="title card-title">E-Commerce site</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Description:</h6>
+              <h5 class="title sub-title">Description:</h5>
               <p>
-                Users can search and browse for products they might want to buy
-                from 4 different categories. They can sort or filter products
-                depending on the price or category, and add or remove products
-                to cart. The checkout includes a billing information form and an
-                order summary as the final step.
+                Users can search and browse for products from 4 different
+                categories. They can sort or filter products depending on the
+                price or category, and add or remove products to cart. The
+                checkout includes a billing information form and an order
+                summary as the final step.
               </p>
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Motivation:</h6>
+              <h5 class="title sub-title">Motivation:</h5>
               <p>
-                The main motivation was to try out and learn both Redux and
-                Material-UI. I wanted to make an e-commerce project and found
-                <a href="https://opentdb.com/" title="Fake Store API homepage"
-                  >Fake Store API</a
+                The primary motive was to try out and learn both Redux and
+                Material-UI.<span class="hidden-text">
+                  I also liked the idea of an e-commerce project and discovered
+                  <a
+                    href="https://fakestoreapi.com/"
+                    title="Fake Store API homepage"
+                    >Fake Store API</a
+                  >
+                  to get data for my application. I knew state management is an
+                  important aspect of an shopping site, so choosing Redux was an
+                  easy choice because it is the most widely used library in that
+                  regard. I had never utilized an UI framework before, but after
+                  some research I realized I cannot go wrong by choosing
+                  Material-UI.</span
                 >
-                to fetch data from. I knew state management is an important
-                aspect of an e-commerce site, so Redux was an easy choice. I had
-                never used an UI framework before, but after some research I
-                realized I cannot go wrong by choosing Material-UI.
               </p>
+              <button class="read-more-btn motivation" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Challenges I faced:</h6>
+              <h5 class="title sub-title">Challenges I faced:</h5>
               <p>
-                I used Redux for the first time and it was quite intimidating at
-                first. It was difficult to wrap my head around all the
-                boilerplate code necessary to even start doing something, but
-                eventually it did start to make sense. Due to my unfamiliarity
-                with Redux, even simple tasks took a while to implement, but I
-                got there at the end, and saved myself an immense amount of prop
-                drilling.
+                I used Redux for the first time and it was rather intimidating
+                initially.<span class="hidden-text">
+                  It was difficult to wrap my head around all the boilerplate
+                  code necessary to even begin doing something. Eventually it
+                  did start to make sense. Due to my unfamiliarity with Redux,
+                  even simple tasks took a while to implement, but I got there
+                  at the end, and saved myself an immense amount of prop
+                  drilling.</span
+                >
               </p>
-              <p class="second-paragraph">
+              <p class="second-paragraph hidden-text">
                 I had never worked with a styling/UI framework before either. It
                 felt strange not having to build everything from scratch. It
                 took some time to familiarize with the Material-UI documentation
@@ -244,10 +235,13 @@
                 component. I quickly learned that one of the most challenging
                 parts is to customize a component exactly the way I want to.
               </p>
+              <button class="read-more-btn challenges" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="tech-container">
-              <h6 class="title sub-title">Technologies used:</h6>
+              <h5 class="title sub-title">Technologies used:</h5>
               <ul class="tech-list">
                 <li>React</li>
                 <li>Redux</li>
@@ -257,7 +251,7 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="links-container">
-              <h6 class="title sub-title">Links:</h6>
+              <h5 class="title sub-title">Links:</h5>
               <a
                 class="btn demo-btn"
                 title="Go to LIVE project website"
@@ -283,16 +277,17 @@
             </div>
           </div>
           <div class="project-image-container">
-            <img
-              class="project-image"
-              src="/src/assets/e-commerce1.png"
-              alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
-            />
-            <img
-              class="project-image"
-              src="/src/assets/e-commerce2.png"
-              alt="Screencapture of the deployed E-Commerce project cart page. User can add or remove products."
-            />
+            <a
+              href="https://e-commerce-mr.netlify.app/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="project-image"
+                src="/src/assets/e-commerce-final2.png"
+                alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
+                title="Screencapture of the landing page"
+            /></a>
           </div>
         </article>
         <!-- END of Single Item -->
@@ -302,22 +297,24 @@
         <!-- Single Item -->
         <article class="project-item-container">
           <div class="project-image-container">
-            <img
-              class="project-image"
-              src="/src/assets/recipes2.png"
-              alt="Screenshot of the Seafoods category meals page"
-            />
-            <img
-              class="project-image"
-              src="/src/assets/recipes3.png"
-              alt="Screencapture of the deployed Recipe project recipe page. User can view detailed information about the chosen recipe"
-            />
+            <a
+              href="https://recipes-app-mr.netlify.app/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/recipes2.png"
+                alt="Screencapture of the deployed Recipe project Seafoods category meals page. User can select his favorite meal from a grid list which includes illustrations of each meal in the category"
+                title="Screenshot of the Seafoods category meals page"
+              />
+            </a>
           </div>
           <div class="card">
-            <h5 class="title card-title">Recipes app</h5>
+            <h4 class="title card-title">Recipes app</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Description:</h6>
+              <h5 class="title sub-title">Description:</h5>
               <p>
                 Users can search and browse for recipes from a wide array of
                 food categories. Detailed information about each particular
@@ -328,42 +325,54 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Motivation:</h6>
+              <h5 class="title sub-title">Motivation:</h5>
               <p>
-                The main motivation was to learn Typescript. I felt that the
-                overall complexity level of the project was just right to try
-                out TS. I decided to use Redux Toolkit for the first time as
-                well. I wanted to make a project related to food, and I found
-                <a
-                  href="https://www.themealdb.com/api.php"
-                  title="TheMealDB homepage"
-                  >TheMealDB API</a
+                I desired to practice TypeScript and get more accustomed to
+                Redux.<span class="hidden-text">
+                  I felt that the overall complexity level of the project was
+                  just right to put my TS theoretical knowledge to use. I chose
+                  to do a project related to food because I found
+                  <a
+                    href="https://www.themealdb.com/api.php"
+                    title="TheMealDB homepage"
+                    >TheMealDB API</a
+                  >
+                  that fit the bill for my data requirements almost
+                  perfectly.</span
                 >
-                that fit the bill for my data requirements almost perfectly.
               </p>
+              <button class="read-more-btn motivation" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Challenges faced:</h6>
+              <h5 class="title sub-title">Challenges faced:</h5>
               <p>
                 Biggest hurdle was in the beginning with all the setup, and
-                getting accustomed to writing everything in TypeScript (TS). I
-                got constantly screamed at by long-winded TS errors which was
-                rather intimidating at first. For educational purposes, I tried
-                to steer away from using any types to ease out of trouble. Even
-                simple tasks became quite time consuming.
+                getting used to writing everything in TypeScript (TS).<span
+                  class="hidden-text"
+                >
+                  I got constantly screamed at by long-winded TS errors which
+                  was rather intimidating at first. For educational purposes, I
+                  tried to steer away from using any types to ease out of
+                  trouble. Even simple tasks became quite time consuming.</span
+                >
               </p>
-              <p class="second-paragraph">
+              <p class="second-paragraph hidden-text">
                 TS did start to grow on me as I got more accustomed to thinking
                 on that level, and I particularly liked the IntelliSense aspect
                 of it. I know more practice is needed for me to be fully
                 comfortable with TS, but I am glad I chose to take the first
                 step.
               </p>
+              <button class="read-more-btn challenges" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="tech-container">
-              <h6 class="title sub-title">Technologies used:</h6>
+              <h5 class="title sub-title">Technologies used:</h5>
               <ul class="tech-list">
                 <li>React</li>
                 <li>TypeScript</li>
@@ -375,7 +384,7 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="links-container">
-              <h6 class="title sub-title">Links:</h6>
+              <h5 class="title sub-title">Links:</h5>
               <a
                 class="btn demo-btn"
                 title="Go to LIVE project website"
@@ -408,10 +417,10 @@
         <!-- Single Item -->
         <article class="project-item-container">
           <div class="card">
-            <h5 class="title card-title">Quiz app</h5>
+            <h4 class="title card-title">Quiz app</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Description:</h6>
+              <h5 class="title sub-title">Description:</h5>
               <p>
                 Users can generate their own custom quiz and play it. They can
                 choose the number of questions, category and difficulty level. A
@@ -421,39 +430,45 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Motivation:</h6>
+              <h5 class="title sub-title">Motivation:</h5>
               <p>
                 Before I started the project I felt like I needed to solidify
                 the fundamental skills in React and JavaScript in general to
-                feel more comfortable with them. A quiz app seemed a good option
-                do to that. It gave me the possibility to use React Router for
-                the first time and I also wanted to add animations to my
-                project. I found
-                <a
-                  href="https://opentdb.com/"
-                  title="Open Trivia Database homepage"
-                  >Open Trivia Database API</a
+                feel more comfortable with them.<span class="hidden-text">
+                  A quiz app seemed a good option do to that. It gave me the
+                  possibility to use React Router for the first time and I also
+                  wanted to add animations to my project. I found
+                  <a
+                    href="https://opentdb.com/"
+                    title="Open Trivia Database homepage"
+                    >Open Trivia Database API</a
+                  >
+                  to supply my app with data.</span
                 >
-                to supply my app with data.
               </p>
+              <button class="read-more-btn motivation" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Challenges I faced:</h6>
+              <h5 class="title sub-title">Challenges I faced:</h5>
               <p>
                 One particular challenging part was when I wanted to
                 simultaneously fetch data and redirect the user to a new page
-                after a button click. Initially, I only managed to make one of
-                the two to successfully work. The solution was to use React
-                Router useHistory hook and the push method. I had to add the
-                state which included the fetched questions data as an additional
-                parameter
-                <span class="code-text"
-                  >&nbsp; history.push({ pathname: '/questions', state: {
-                  questions } }); </span
-                >.
+                after a button click.<span class="hidden-text">
+                  Initially, I only managed to make one of the two to
+                  successfully work. The solution was to use React Router
+                  useHistory hook and the push method. I had to add the state
+                  which included the fetched questions data as an additional
+                  parameter
+                  <span class="code-text"
+                    >&nbsp; history.push({ pathname: '/questions', state: {
+                    questions } }); </span
+                  >.</span
+                >
               </p>
-              <p class="second-paragraph">
+              <p class="second-paragraph hidden-text">
                 I had never worked with an animations library before, so getting
                 accustomed to Framer Motion was also an interesting learning
                 experience. The documentation is quite extensive and there are a
@@ -461,10 +476,13 @@
                 exactly what I needed. I learned that tweaking animations to
                 just feel right can be a never ending task.
               </p>
+              <button class="read-more-btn challenges" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="tech-container">
-              <h6 class="title sub-title">Technologies used:</h6>
+              <h5 class="title sub-title">Technologies used:</h5>
               <ul class="tech-list">
                 <li>React</li>
                 <li>SCSS</li>
@@ -474,7 +492,7 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="links-container">
-              <h6 class="title sub-title">Links:</h6>
+              <h5 class="title sub-title">Links:</h5>
               <a
                 class="btn demo-btn"
                 title="Go to LIVE project website"
@@ -500,12 +518,17 @@
             </div>
           </div>
           <div class="project-image-container">
-            <img
-              class="project-image solo"
-              src="/src/assets/quiz2.png"
-              alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
-            />
-            <!-- <img class="project-image" src="/src/assets/quiz4.png" alt="" /> -->
+            <a
+              href="https://quiz-app-mr.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/quiz2.png"
+                alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
+                title="Screencapture of the Quiz App project landing page"
+            /></a>
           </div>
         </article>
         <!-- END of Single Item -->
@@ -515,17 +538,23 @@
         <!-- Single Item -->
         <article class="project-item-container">
           <div class="project-image-container">
-            <img
-              class="project-image solo"
-              src="/src/assets/wind_turbines.png"
-              alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
-            />
+            <a
+              href="https://alaska-wind-turbines.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/wind_turbines.png"
+                alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
+                title="Screencapture of the Alaska Wind Turbine project"
+            /></a>
           </div>
           <div class="card">
-            <h5 class="title card-title">Wind Turbines Tracker</h5>
+            <h4 class="title card-title">Wind turbines tracker</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Description:</h6>
+              <h5 class="title sub-title">Description:</h5>
               <p>
                 Web app locating wind turbines in Alaska. Users can find
                 detailed information about each wind turbine by clicking on the
@@ -536,46 +565,60 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Motivation:</h6>
+              <h5 class="title sub-title">Motivation:</h5>
               <p>
                 I have always loved working with maps, and I knew I wanted to
-                make a project using Google Maps API. Therefore, I searched for
-                interesting data to build my app around. I eventually found wind
-                turbines data from
-                <a
-                  href="https://www.usgs.gov/products/data-and-tools/apis"
-                  title="U.S. Geological Survey API homepage"
-                  >U.S. Geological Survey API</a
+                make a project using Google Maps API.<span class="hidden-text">
+                  Therefore, I searched for interesting data to build my app
+                  around. I eventually found wind turbines data from
+                  <a
+                    href="https://www.usgs.gov/products/data-and-tools/apis"
+                    title="U.S. Geological Survey API homepage"
+                    >U.S. Geological Survey API</a
+                  >
+                  which seemed compelling enough.</span
                 >
-                which seemed compelling enough.
               </p>
+              <button class="read-more-btn motivation" type="button">
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
-              <h6 class="title sub-title">Challenges faced:</h6>
+              <h5 class="title sub-title">Challenges faced:</h5>
               <p>
                 In the beginning the main challenge was to find data which had
-                geographical coordinates included in the dataset. Later on, I
-                realized that there was a lot of data missing. I had to start
-                filling in the gaps to make the app look more presentable.
+                geographical coordinates included in the dataset.<span
+                  class="hidden-text"
+                >
+                  Later on, I realized that there was a lot of data missing. I
+                  had to start filling in the gaps to make the app look more
+                  presentable.</span
+                >
               </p>
-              <p class="second-paragraph">
+              <p class="second-paragraph hidden-text">
                 This was the first bigger React project I had done, and that
                 brought up many challenges in itself. Integrating React with
                 Google Maps API was the main one. I had a difficult time finding
                 exactly what I needed from the extensive Google Maps API
                 documentation.
               </p>
-              <p class="second-paragraph">
+              <p class="second-paragraph hidden-text">
                 Also, I did not really know how to exactly implement most of the
                 things in React. I started to focus on smaller sections of demo
                 code to get a better understanding what is going on, and
                 eventually it started to make more sense.
               </p>
+              <button
+                class="read-more-btn challenges extraParagraph"
+                type="button"
+              >
+                Read more...
+              </button>
             </div>
             <div class="divider card-divider"></div>
             <div class="tech-container">
-              <h6 class="title sub-title">Technologies used:</h6>
+              <h5 class="title sub-title">Technologies used:</h5>
               <ul class="tech-list">
                 <li>React</li>
                 <li>SCSS</li>
@@ -584,7 +627,7 @@
             </div>
             <div class="divider card-divider"></div>
             <div class="links-container">
-              <h6 class="title sub-title">Links:</h6>
+              <h5 class="title sub-title">Links:</h5>
               <a
                 class="btn demo-btn"
                 title="Go to LIVE project website"
@@ -625,7 +668,7 @@
             <h4 class="accordion-item-header">
               When did I start learning web development?
             </h4>
-            <div class="accordion-item-body">
+            <div class="accordion-item-body" aria-expanded="false">
               <div class="accordion-item-body-content">
                 <p>June 2020.</p>
               </div>
@@ -635,7 +678,7 @@
             <h4 class="accordion-item-header">
               What do I like the most about being a front-end developer?
             </h4>
-            <div class="accordion-item-body">
+            <div class="accordion-item-body" aria-expanded="false">
               <div class="accordion-item-body-content">
                 <p>
                   Front-end web development is exciting for me because it is
@@ -653,7 +696,7 @@
           </article>
           <article class="accordion-item">
             <h4 class="accordion-item-header">What is my motto in life?</h4>
-            <div class="accordion-item-body">
+            <div class="accordion-item-body" aria-expanded="false">
               <div class="accordion-item-body-content">
                 <p>
                   If I'm the smartest person in the room, then I'm definitely in

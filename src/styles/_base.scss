@@ -1,6 +1,19 @@
 // main variables
-$accentColor: #ff0066;
-// $accentColor2: #ff4d94;
+$bg-main: #1e1645;
+$bg-header: #111436;
+$bg-questions: #34495e;
+$bg-white: #f8f8ff;
+$accent-color: #ff0066;
+// $accent-color2: #ff4d94;
+// $waves-color: #235789;
+$nav-list-hover: #35c2fa;
+$divider-color: #dfdfdf;
+$underline-color: #abe0e7;
+$max-width: 1180px;
+
+// btn
+$btn-hover-bg: #ee8888;
+$btn-active-bg: #f05d5d;
 
 // title
 $title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
@@ -12,49 +25,15 @@ $title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 $title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
   rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
 
-$header-bg: #111436;
-$waves-color: #235789;
-
-$divider-color: #dfdfdf;
-$underline-color: #abe0e7;
-$qa-bg: #34495e;
-$navList-hover: #35c2fa;
-$max-width: 1140px;
-
-$btn-hover-bg: #ee8888;
-$btn-active-bg: #f05d5d;
-
-$bg: #242526; /*  #272727  #333  */
-$bg-accent: #484a4d;
-$bg-white: #f8f8ff;
-$main-bg: #1e1645;
-$itemBackground: rgba(30, 31, 83, 0.14);
-$bgColorBtn: #6068db;
-$btnSecondary: #255d79;
-
 // text
 $font-family-main: 'Open Sans', sans-serif;
 $font-family-title: 'Lato', sans-serif;
 $text-white: #e6e6e6;
 $text-black: #272727;
 
-// border
-$border-1: 1px solid #474a4d;
-$border-2: 1px solid #c0c0c0; // hea hallikas border
-$border-highlight: #93f4ab;
-$gridBorder: 1px solid rgb(64, 11, 114);
-$doubleBorder: 4px double rgb(198, 200, 198);
-
-// btn variables
-$btnText: rgb(246, 245, 245);
-$btnShadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
 // shadow
-$accordion-boxShadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$itemBoxShadow: 0px 2px 5px 3px rgb(148, 148, 148);
-$paperBoxShadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+$accordion-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+$paper-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 $sidebar-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
   rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -75,6 +54,7 @@ $small-mobile: 400px;
   }
 }
 
+// placeholder selectors
 %main-btn-defaults {
   color: $text-white;
   font-size: 1.12rem;
@@ -117,10 +97,6 @@ $small-mobile: 400px;
 %project-container {
   border-radius: 0.28em;
   box-shadow: $project-shadow;
-
-  // @include mediaQuery($mobile) {
-  //   border-radius: 0 0 0.28em 0.28em;
-  // }
 }
 
 //animations '
@@ -147,8 +123,14 @@ $small-mobile: 400px;
   animation: bounce-down 1.6s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   @keyframes bounce-down {
+    0% {
+      transform: translate(-50%, 1%);
+    }
     50% {
-      transform: translateY(28%);
+      transform: translate(-50%, 29%);
+    }
+    100% {
+      transform: translate(-50%, 1%);
     }
   }
 }
@@ -191,10 +173,6 @@ a:visited {
 main {
   display: block;
 }
-
-// article {
-//   margin: 0;
-// }
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
