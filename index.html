@@ -23,6 +23,7 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/styles/main.scss" />
   </head>
   <body>
@@ -176,7 +177,20 @@
         <div class="underline"></div>
         <!-- Single Item -->
         <article class="project-item-container">
-          <div class="card">
+          <div class="project-image-container" data-aos="fade-up">
+            <a
+              href="https://e-commerce-mr.netlify.app/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="project-image"
+                src="/src/assets/e-commerce-final2.png"
+                alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
+                title="Screencapture of the landing page"
+            /></a>
+          </div>
+          <div class="card" data-aos="fade-left">
             <h4 class="title card-title">E-Commerce site</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
@@ -217,8 +231,8 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Challenges I faced:</h5>
               <p>
-                I used Redux for the first time and it was rather intimidating
-                initially.<span class="hidden-text">
+                Getting accustomed to Redux was rather intimidating at first.
+                <span class="hidden-text">
                   It was difficult to wrap my head around all the boilerplate
                   code necessary to even begin doing something. Eventually it
                   did start to make sense. Due to my unfamiliarity with Redux,
@@ -276,19 +290,6 @@
               ></a>
             </div>
           </div>
-          <div class="project-image-container">
-            <a
-              href="https://e-commerce-mr.netlify.app/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img
-                class="project-image"
-                src="/src/assets/e-commerce-final2.png"
-                alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
-                title="Screencapture of the landing page"
-            /></a>
-          </div>
         </article>
         <!-- END of Single Item -->
         <div class="divider-section">
@@ -296,21 +297,7 @@
         </div>
         <!-- Single Item -->
         <article class="project-item-container">
-          <div class="project-image-container">
-            <a
-              href="https://recipes-app-mr.netlify.app/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img
-                class="project-image solo"
-                src="/src/assets/recipes2.png"
-                alt="Screencapture of the deployed Recipe project Seafoods category meals page. User can select his favorite meal from a grid list which includes illustrations of each meal in the category"
-                title="Screenshot of the Seafoods category meals page"
-              />
-            </a>
-          </div>
-          <div class="card">
+          <div class="card" data-aos="fade-right">
             <h4 class="title card-title">Recipes app</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
@@ -327,10 +314,10 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Motivation:</h5>
               <p>
-                I desired to practice TypeScript and get more accustomed to
+                I desired to practice TypeScript and get more familiar with
                 Redux.<span class="hidden-text">
                   I felt that the overall complexity level of the project was
-                  just right to put my TS theoretical knowledge to use. I chose
+                  just right to put my theoretical TS knowledge to use. I chose
                   to do a project related to food because I found
                   <a
                     href="https://www.themealdb.com/api.php"
@@ -360,9 +347,9 @@
                 >
               </p>
               <p class="second-paragraph hidden-text">
-                TS did start to grow on me as I got more accustomed to thinking
-                on that level, and I particularly liked the IntelliSense aspect
-                of it. I know more practice is needed for me to be fully
+                TS did start to grow on me as I got more used to thinking on
+                that level, and I particularly liked the IntelliSense aspect of
+                it. I know more practice is needed for me to be fully
                 comfortable with TS, but I am glad I chose to take the first
                 step.
               </p>
@@ -409,6 +396,20 @@
               ></a>
             </div>
           </div>
+          <div class="project-image-container" data-aos="fade-up">
+            <a
+              href="https://recipes-app-mr.netlify.app/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/recipes2.png"
+                alt="Screencapture of the deployed Recipe project Seafoods category meals page. User can select his favorite meal from a grid list which includes illustrations of each meal in the category"
+                title="Screenshot of the Seafoods category meals page"
+              />
+            </a>
+          </div>
         </article>
         <!-- END of Single Item -->
         <div class="divider-section">
@@ -416,7 +417,20 @@
         </div>
         <!-- Single Item -->
         <article class="project-item-container">
-          <div class="card">
+          <div class="project-image-container" data-aos="fade-up">
+            <a
+              href="https://quiz-app-mr.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/quiz2.png"
+                alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
+                title="Screencapture of the Quiz App project landing page"
+            /></a>
+          </div>
+          <div class="card" data-aos="fade-left">
             <h4 class="title card-title">Quiz app</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
@@ -432,12 +446,13 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Motivation:</h5>
               <p>
-                Before I started the project I felt like I needed to solidify
-                the fundamental skills in React and JavaScript in general to
-                feel more comfortable with them.<span class="hidden-text">
-                  A quiz app seemed a good option do to that. It gave me the
-                  possibility to use React Router for the first time and I also
-                  wanted to add animations to my project. I found
+                Before I started the project, I identified that I had to
+                solidify the fundamental skills in React and JavaScript to feel
+                more comfortable with them.<span class="hidden-text">
+                  A quiz app seemed a good option to improve my core abilities.
+                  It gave me the possibility to use React Router for the first
+                  time, and I also planned to add animations to my project. I
+                  found
                   <a
                     href="https://opentdb.com/"
                     title="Open Trivia Database homepage"
@@ -454,7 +469,7 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Challenges I faced:</h5>
               <p>
-                One particular challenging part was when I wanted to
+                One particular challenging part was when I wished to
                 simultaneously fetch data and redirect the user to a new page
                 after a button click.<span class="hidden-text">
                   Initially, I only managed to make one of the two to
@@ -517,19 +532,6 @@
               ></a>
             </div>
           </div>
-          <div class="project-image-container">
-            <a
-              href="https://quiz-app-mr.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="project-image solo"
-                src="/src/assets/quiz2.png"
-                alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
-                title="Screencapture of the Quiz App project landing page"
-            /></a>
-          </div>
         </article>
         <!-- END of Single Item -->
         <div class="divider-section">
@@ -537,20 +539,7 @@
         </div>
         <!-- Single Item -->
         <article class="project-item-container">
-          <div class="project-image-container">
-            <a
-              href="https://alaska-wind-turbines.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="project-image solo"
-                src="/src/assets/wind_turbines.png"
-                alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
-                title="Screencapture of the Alaska Wind Turbine project"
-            /></a>
-          </div>
-          <div class="card">
+          <div class="card" data-aos="fade-right">
             <h4 class="title card-title">Wind turbines tracker</h4>
             <div class="divider card-divider"></div>
             <div class="card-text-container">
@@ -587,13 +576,13 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Challenges faced:</h5>
               <p>
-                In the beginning the main challenge was to find data which had
+                In the beginning, the main challenge was to find data which had
                 geographical coordinates included in the dataset.<span
                   class="hidden-text"
                 >
                   Later on, I realized that there was a lot of data missing. I
-                  had to start filling in the gaps to make the app look more
-                  presentable.</span
+                  had to start filling in the gaps with randomly generated
+                  numbers to make the app look more presentable.</span
                 >
               </p>
               <p class="second-paragraph hidden-text">
@@ -605,8 +594,8 @@
               </p>
               <p class="second-paragraph hidden-text">
                 Also, I did not really know how to exactly implement most of the
-                things in React. I started to focus on smaller sections of demo
-                code to get a better understanding what is going on, and
+                things in React. I started to focus on smaller sections of the
+                demo code to get a better understanding what is going on, and
                 eventually it started to make more sense.
               </p>
               <button
@@ -652,6 +641,19 @@
               ></a>
             </div>
           </div>
+          <div class="project-image-container" data-aos="fade-up">
+            <a
+              href="https://alaska-wind-turbines.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="project-image solo"
+                src="/src/assets/wind_turbines.png"
+                alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
+                title="Screencapture of the Alaska Wind Turbine project"
+            /></a>
+          </div>
         </article>
         <!-- END of Single Item -->
       </section>
@@ -666,11 +668,18 @@
         <div class="accordion">
           <article class="accordion-item">
             <h4 class="accordion-item-header">
-              When did I start learning web development?
+              When and how did I start learning web development?
             </h4>
             <div class="accordion-item-body" aria-expanded="false">
               <div class="accordion-item-body-content">
-                <p>June 2020.</p>
+                <p>
+                  Web development sparked my interest during lockdown in May
+                  2020. In the beginning, I followed along Colt Steele's The Web
+                  Developer Bootcamp Udemy course, and read articles, watched
+                  other videos on the side. I completed Codecademy's JavaScript
+                  curriculum in the summer, and then continued working on
+                  personal projects until now.
+                </p>
               </div>
             </div>
           </article>
@@ -681,15 +690,85 @@
             <div class="accordion-item-body" aria-expanded="false">
               <div class="accordion-item-body-content">
                 <p>
-                  Front-end web development is exciting for me because it is
-                  always evolving and constantly changing. I will continually
-                  have the opportunity to interact with new tools and learn new
-                  skills.
+                  I love being able to make an impact on everything the user
+                  sees and interacts with. I am essentially responsible for the
+                  users happiness. I also like the front-end landscape in
+                  general because it is always evolving and changing. I will
+                  continually have the opportunity to interact with new tools
+                  and learn new skills.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What is usually the most difficult part of a frontend project for
+              me and why?
+            </h4>
+            <div class="accordion-item-body" aria-expanded="false">
+              <div class="accordion-item-body-content">
+                <p>
+                  I find that building consistent user experience can be quite
+                  challenging at times. Especially in terms of making sure
+                  everything is compatible in every browser and looking good on
+                  different devices and screen sizes.
                 </p>
                 <p>
-                  I just find it really rewarding. I build everything the user
-                  sees and interacts with, so I am essentially responsible for
-                  the users happiness.
+                  The tooling aspect is worth mentioning as well. Starting a new
+                  project from scratch and setting everything up properly can
+                  sometimes be rather tedious and time consuming. At the same
+                  time, I acknowledge that tools are there to help developers so
+                  that is the trade-off I guess.
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What are my favourite features in modern JavaScript and why?
+            </h4>
+            <div class="accordion-item-body" aria-expanded="false">
+              <div class="accordion-item-body-content">
+                <p>
+                  I think all of the new features can come in handy at times,
+                  but I find array functions map/filter/reduce and async/await
+                  to be especially useful. They simplify the most common coding
+                  tasks so much, and as a result the code is cleaner and easier
+                  to implement and understand.
+                </p>
+              </div>
+            </div>
+          </article> -->
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What resources do I use to learn about the latest trends in
+              front-end development?
+            </h4>
+            <div class="accordion-item-body" aria-expanded="false">
+              <div class="accordion-item-body-content">
+                <p>
+                  I have signed up for different newsletters (e.g. Codeacademy,
+                  FreeCodeCamp) which cover a wide array of compelling subjects.
+                  I also search for articles, videos, and interactive coding
+                  lessons on specific topics that come up while I am working on
+                  my personal projects or just what I find interesting at a
+                  certain time.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <h4 class="accordion-item-header">
+              What are my near-term plans for the future?
+            </h4>
+            <div class="accordion-item-body" aria-expanded="false">
+              <div class="accordion-item-body-content">
+                <p>
+                  I have realized that what first started as a hobby could
+                  possibly be a very rewarding career. I am interested in an
+                  internship or a junior front-end developer job to gain
+                  valuable experience with real projects and further learn new
+                  web development practices.
                 </p>
               </div>
             </div>
@@ -747,5 +826,13 @@
       </p>
     </footer>
     <script src="src/scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-out',
+        offset: 200,
+      });
+    </script>
   </body>
 </html>
