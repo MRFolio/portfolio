@@ -8,10 +8,13 @@ $accent-color: #ff0066;
 // $waves-color: #235789;
 $nav-list-hover: #35c2fa;
 $divider-color: #dfdfdf;
-$underline-color: #abe0e7;
+$underline-color-main: #2b82d8;
+$underline-color-secondary: #abe0e7;
 $max-width: 1180px;
 
 // btn
+$btn-main-bg: #2665ad;
+// $btn-main-bg: #3039bd;
 $btn-hover-bg: #ee8888;
 $btn-active-bg: #f05d5d;
 
@@ -58,6 +61,7 @@ $small-mobile: 400px;
 %main-btn-defaults {
   color: $text-white;
   font-size: 1.12rem;
+  letter-spacing: 0.01em;
   border-radius: 0.25em;
   border: 1px solid rgb(70, 107, 192);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -66,6 +70,7 @@ $small-mobile: 400px;
 
   &:hover {
     background: #173c5c;
+    // background: #2665ad;
   }
 
   &:active {
@@ -89,9 +94,11 @@ $small-mobile: 400px;
   top: 50%;
   left: 50%;
   padding: 0.37em;
+  padding: 0.37em;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  font-size: 0.76rem;
+  // font-size: 0.76rem;
+  font-size: 0.7rem;
 }
 
 %project-container {

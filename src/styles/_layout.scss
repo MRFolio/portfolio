@@ -102,6 +102,8 @@
 
       &:hover {
         color: #1effec;
+        color: #58fff1;
+        // color: #07ffea;
       }
     }
 
@@ -171,6 +173,7 @@
   .job-position {
     font-size: 1.65rem;
     letter-spacing: 0.02em;
+    margin-bottom: 0.1em;
 
     @include b.mediaQuery(b.$tablet) {
       font-size: 1.5rem;
@@ -219,7 +222,7 @@
       }
 
       &:hover {
-        color: rgb(31, 143, 187);
+        color: #1f8fbb;
         transform: scale(1.02);
       }
 
@@ -297,10 +300,10 @@
     letter-spacing: 0.02em;
     box-shadow: #2665ad 0px 0px 0px 2px inset,
       rgb(255, 255, 255) 4px 4px 0px -2px, #7494d1 4px 4px;
-    // box-shadow: b.$title-shadow-main;
+    box-shadow: b.$title-shadow-main;
+    // box-shadow: b.$title-shadow-primary;
     // box-shadow: #adc8fa 0px 0px 0px 2px inset,
     //   rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
-    box-shadow: b.$title-shadow-primary;
 
     .iconTitle {
       color: #2665ad;

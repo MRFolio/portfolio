@@ -122,27 +122,42 @@
 .divider-intro {
   height: 1px;
   width: 196px;
-  margin: 0.7em auto;
+  margin: 0.75em auto;
   background-color: b.$divider-color;
   position: relative;
 
   .icon {
     @extend %divider-base;
     border: 1px solid b.$divider-color;
-    color: rgb(53, 148, 156);
-    // color: rgb(72, 191, 202);
-    // color: rgb(39, 128, 116);
-    // color: #145d5f;
-    color: #50bfd3;
+    // color: #50bfd3;
+    // color: #1e1645;
+    // background-color: rgb(210, 250, 253);
+    // background: linear-gradient(155deg, rgb(222, 243, 245), rgb(160, 240, 243));
+    box-shadow: white 0 0 0 8px;
+    // siit alates uus
+
+    // color: #48bfca;
     // color: #5ed7db;
-    background-color: rgb(149, 184, 187);
-    // background-color: rgb(39, 56, 58);
-    background: linear-gradient(155deg, rgb(222, 243, 245), rgb(160, 240, 243));
+    color: white;
+    background-color: b.$bg-main;
+    // background-color: #1e1645;
+    // background-color: #1e1645;
+    // background-color: #d0caeb; // huvitav
+    // background-color: #283636;
+    // // valge taust
+    // color: b.$bg-main;
+    // color: #1e1645;
+    // color: #50bfd3;
+    // background: white;
+    // background: #cbf9ff;
+    // background: #dafbff;
+    // background: #effdff;
+    // background: #f7feff;
+
     // background-color: rgb(96, 187, 195);
     // color: rgb(241, 241, 241);
     //   background-color: white;
     // text-shadow: rgb(223, 187, 42) 1px 0 10px;
-    box-shadow: white 0 0 0 8px;
     // text-align: center;
     // margin-top: 0.1em;
   }
@@ -150,38 +165,43 @@
 
 .divider {
   @extend %content-divider;
-  width: 60%;
+  // width: 57%;
+  width: 52%;
 
-  @include b.mediaQuery(b.$tablet) {
-    width: 100%;
+  &.lower {
+    width: 56px;
   }
+
+  // @include b.mediaQuery(b.$tablet) {
+  //   width: 100%;
+  //   width: 52%;
+  // }
 }
 
 .underline {
   width: 56px;
   height: 2px;
-  background: b.$bg-main;
-  background: #e6e7e8;
-  background: b.$divider-color;
-  background: #2b82d8;
+  // background: b.$bg-main;
+  // background: #e6e7e8;
+  // background: b.$divider-color;
+  // background: #2b82d8;
+  background: b.$underline-color-main;
   // background: b.$underline-color;
   // background: rgb(181, 211, 211);
   margin: 1.2em auto;
 
   &.bright {
-    background: #abe0e7;
+    background: b.$underline-color-secondary;
   }
 
-  &.contact {
-    background: rgb(171, 224, 231);
-    // background: #2b82d8;
-    background: #2b82d8;
-    background: #2e5bee;
-    background: #2b82d8;
-    // background: b.$underline-color;
-    // background: rgb(171, 224, 231);
-    // background: b.$underline-color;
-  }
+  // &.contact {
+  //   background: #2b82d8; // sama
+  //   background: rgb(171, 224, 231);
+  //   background: #2b82d8;
+  //   background: #2e5bee;
+  //   background: b.$underline-color;
+  //   background: rgb(171, 224, 231);
+  // }
 }
 
 .divider-section {
@@ -195,17 +215,18 @@
   .icon {
     @extend %divider-base;
     color: white;
-    background-color: #50bfd3;
+    // background-color: #50bfd3;
     // background-color: rgb(67, 74, 175);
     // background-color: #2b82d8;
     // background-color: rgb(53, 148, 156);
     color: #50bfd3;
-    background: linear-gradient(155deg, rgb(222, 243, 245), rgb(160, 240, 243));
-    border: 1px solid b.$divider-color;
+    // background: linear-gradient(155deg, rgb(222, 243, 245), rgb(160, 240, 243));
+    // border: 1px solid b.$divider-color;
     border: 5px solid white;
     background: b.$bg-main;
+    // background: #27383a;
     // background: #331e38;
-    color: rgb(104, 207, 214);
+    // color: rgb(104, 207, 214);
     color: b.$text-white;
     // color: b.$bg-main;
     //   background-color: white;
@@ -231,14 +252,16 @@
 
 .intro-action-btn {
   @extend %main-btn-defaults;
-  background: #2665ad;
-  // background: rgb(48, 57, 189);
+  background: b.$btn-main-bg;
+  // background: #2665ad;
+  // background: #3039bd;
+  // background: #3d48dd;
+  // background: #3039bd;
   // background: #236b9b;
   margin: 0.6em 0;
   padding: 0.7em 1em;
   border: 1px solid rgb(70, 107, 192);
   font-weight: bold;
-  letter-spacing: 0.01em;
   // color: rgb(250, 250, 250) !important;
   z-index: 1;
 
@@ -275,7 +298,7 @@
   justify-content: space-between;
   padding: 1em;
   line-height: 1.5;
-  background: b.$bg-white;
+  // background: b.$bg-white;
   background: white;
   // box-shadow: b.$paper-box-shadow;
   // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -322,8 +345,8 @@
   }
 
   p a {
-    color: rgb(33, 52, 224);
-    color: rgb(61, 79, 240);
+    // color: rgb(33, 52, 224);
+    color: rgb(56, 74, 238);
 
     &:hover {
       text-decoration: underline;
@@ -343,8 +366,8 @@
     // color: b.$text-black;
     // font-weight: bold;
     transition: all 0.6s ease-out;
-    color: #2665ad;
-    border: 1px solid #2665ad;
+    color: b.$btn-main-bg;
+    border: 1px solid b.$btn-main-bg;
     cursor: pointer;
 
     &:hover {
@@ -377,13 +400,13 @@
 
       > li {
         padding: 0.32em 0.9em;
-        background: #1b7195;
-        // background: #092633;
-        // background: #040926;
-        // background: #121420;
-        // background: #1d2224;
+        // background: #1b7195;
+        // background: rgb(0, 36, 51);
+        background: rgb(9, 38, 51);
+        // background: rgb(4, 9, 38);
+        // background: rgb(18, 20, 32);
         // color: rgb(245, 245, 245);
-        color: rgb(252, 252, 252);
+        color: rgb(244, 244, 244);
         // color: b.$text-white;
         border-radius: 0.2em;
         border-radius: 1.2em;
@@ -416,13 +439,13 @@
     .btn {
       @extend %main-btn-defaults;
       font-weight: bold;
-      letter-spacing: 0.01em;
       padding: 0.5em 1em;
       padding: 0.6em 0.8em;
       width: 100%;
-      background: rgb(48, 57, 189);
-      background: #2665ad;
-      background: #2665ad;
+      // background: #3039bd;
+      background: b.$btn-main-bg;
+      // background: #2665ad;
+      // background: #1b7195;
     }
   }
 }
@@ -448,9 +471,9 @@
     height: 100%;
     // transition: all 0.45s ease-out;
 
-    &.solo {
-      box-shadow: none;
-    }
+    // @media only screen and (max-width: b.$tablet) and (min-width: b.$mobile) {
+    //   box-shadow: none;
+    // }
 
     // &:hover {
     //   box-shadow: 2px 5px 3px rgb(148, 148, 148);
@@ -464,9 +487,6 @@
       // overflow: hidden;
       // object-fit: cover;
       // box-shadow: none;
-      &.second {
-        display: none;
-      }
     }
 
     @include b.mediaQuery(b.$mobile) {

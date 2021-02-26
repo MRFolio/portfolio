@@ -2,7 +2,7 @@
 AOS.init({
   duration: 1000,
   easing: 'ease-out',
-  offset: 200,
+  offset: 180,
 });
 
 // Selectors
@@ -27,11 +27,15 @@ const menuBtnIconToggle = () => {
 const toggleSidebar = () => {
   sidebar.classList.toggle('show-sidebar');
   menuBtnIconToggle();
+  let expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+
+  menuBtn.setAttribute('aria-expanded', !expanded);
 };
 
 const handleLinkClick = () => {
   sidebar.classList.remove('show-sidebar');
   menuBtn.classList.remove('active');
+  menuBtn.setAttribute('aria-expanded', 'false');
 };
 
 const addMenuLinksToggleEvent = (link) => {

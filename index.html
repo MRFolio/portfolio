@@ -74,6 +74,9 @@
         type="button"
         class="hamburger-btn"
         aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-controls="sidebar"
         title="Toggle navigation menu"
       >
         <i class="fas fa-bars" aria-hidden="true"></i>
@@ -108,7 +111,7 @@
         </ul>
       </nav>
     </aside>
-    <main id="main">
+    <main>
       <!-- HOME -->
       <section id="home" aria-label="Introduction">
         <div class="intro-content">
@@ -145,7 +148,7 @@
               </a>
             </li>
           </ul>
-          <div class="divider"></div>
+          <div class="divider lower"></div>
           <!-- END OF SOCIALS -->
           <a href="#projects" class="intro-action-btn"
             >View my projects
@@ -404,7 +407,7 @@
               rel="noreferrer noopener"
             >
               <img
-                class="project-image solo"
+                class="project-image"
                 src="/src/assets/recipes2.png"
                 alt="Screencapture of the deployed Recipe project Seafoods category meals page. User can select his favorite meal from a grid list which includes illustrations of each meal in the category"
                 title="Screenshot of the Seafoods category meals page"
@@ -425,8 +428,8 @@
               rel="noopener noreferrer"
             >
               <img
-                class="project-image solo"
-                src="/src/assets/quizFinal.png"
+                class="project-image"
+                src="/src/assets/quizApp.png"
                 alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
                 title="Screencapture of the Quiz App project landing page"
             /></a>
@@ -649,7 +652,7 @@
               rel="noopener noreferrer"
             >
               <img
-                class="project-image solo"
+                class="project-image"
                 src="/src/assets/wind_turbines.png"
                 alt="Screencapture of the deployed React Alaska Wind Turbine project. Map of Alaska with green wind turbines scattered around the territory."
                 title="Screencapture of the Alaska Wind Turbine project"
@@ -658,7 +661,7 @@
         </article>
         <!-- END of Single Item -->
       </section>
-      <!-- END of Projects -->
+      <!-- END of PROJECTS -->
       <!-- QA -->
       <section id="questionsAnswers">
         <h3 class="questions-headline">
@@ -774,10 +777,7 @@
           </article>
         </div>
       </section>
-      <!-- END OF QA -->
-      <!-- <div class="divider-section">
-        <i class="fas fa-code icon" aria-hidden="true"></i>
-      </div> -->
+      <!-- END of QA -->
       <!-- CONTACT -->
       <section id="contact">
         <h3 class="title contactHeading">
@@ -798,20 +798,20 @@
       </section>
       <!-- END OF CONTACT -->
     </main>
-    <button
-      type="button"
-      title="Scroll back to top"
-      aria-label="Scroll back to top"
-      class="scroll-top-btn"
-    >
-      <i class="fa fa-chevron-up" aria-hidden="true"></i>
-    </button>
     <footer id="footer">
       <p>
         &copy; <span id="year">2021</span> | Markus Roose |
         <i class="fas fa-map-marker-alt icon" aria-hidden="true"></i>Tartu,
         Estonia
       </p>
+      <button
+        type="button"
+        title="Scroll back to top"
+        aria-label="Scroll back to top"
+        class="scroll-top-btn"
+      >
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </button>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/scripts/main.js"></script>
