@@ -328,7 +328,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.25em;
+      gap: 0.18em;
       margin: 0;
 
       &:nth-of-type(even) {
@@ -385,7 +385,7 @@
     ),
     url('/src/assets/email-pattern.png');
   // background-image: url('/src/assets/email-pattern.png');
-  background-position: 20% -15%;
+  background-position: 20% -45%;
   // background: url('/src/assets/email-pattern.png');
   // background: url('/src/assets/swirl.png');
   // background: url('/src/assets/fabric_of_squares_gray.png');
@@ -400,6 +400,7 @@
   place-items: center;
   // gap: 0.25em;
   padding: 2em;
+  padding: 3em 2em;
 
   @include b.mediaQuery(b.$mobile) {
     padding: 1.25em 0 0;
@@ -468,18 +469,23 @@
       font-size: 1.1rem;
       line-height: 1.5;
       text-align: center;
-      // margin: 0;
+
+      @include b.mediaQuery(b.$mobile) {
+        font-size: 1.08rem;
+      }
     }
 
-    a {
+    .email-link {
       color: #065cfb;
       font-weight: bold;
       letter-spacing: 0.03em;
       transition: color 0.3s ease-out;
 
+      @include b.mediaQuery(b.$mobile) {
+        font-size: 1.1rem;
+      }
+
       &:hover {
-        // color: b.$accent-color;
-        color: rgb(50, 190, 245);
         color: #248ff3;
       }
     }

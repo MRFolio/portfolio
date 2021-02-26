@@ -1,11 +1,19 @@
+// Scroll-animation init
+AOS.init({
+  duration: 1000,
+  easing: 'ease-out',
+  offset: 200,
+});
+
+// Selectors
 const menuBtn = document.querySelector('.hamburger-btn');
 const sidebar = document.getElementById('sidebar');
 const menuLinks = document.querySelectorAll('.menuLink');
 const questions = document.querySelectorAll('.accordion-item-header');
-const motivationShowMoreBtns = document.querySelectorAll(
+const motivationReadMoreBtns = document.querySelectorAll(
   '.read-more-btn.motivation'
 );
-const challengesShowMoreBtns = document.querySelectorAll(
+const challengesReadMoreBtns = document.querySelectorAll(
   '.read-more-btn.challenges'
 );
 const scrollUpBtn = document.querySelector('.scroll-top-btn');
@@ -45,7 +53,7 @@ const handleEscape = (e) => {
   }
 };
 
-// Read more btns
+// Read more buttons
 const handleToggleShowTextShort = (e) => {
   const text = e.currentTarget.previousElementSibling.firstElementChild;
 
@@ -80,6 +88,14 @@ const handleToggleShowTextLong = (e) => {
   e.currentTarget.textContent.trim() === 'Read more...'
     ? (e.currentTarget.textContent = 'Read less...')
     : (e.currentTarget.textContent = 'Read more...');
+};
+
+const addMotivationReadMoreBtnsToggleEvent = (btn) => {
+  btn.addEventListener('click', handleToggleShowTextShort);
+};
+
+const addChallengesReadMoreBtnsToggleEvent = (btn) => {
+  btn.addEventListener('click', handleToggleShowTextLong);
 };
 
 // Scroll to top
@@ -123,21 +139,13 @@ questions.forEach((question) => {
   });
 });
 
-// Show more btns
-const addMotivationShowMoreBtnsToggleEvent = (btn) => {
-  btn.addEventListener('click', handleToggleShowTextShort);
-};
-const addChallengesShowMoreBtnsToggleEvent = (btn) => {
-  btn.addEventListener('click', handleToggleShowTextLong);
-};
-
 // Year text footer
 yearText.innerHTML = new Date().getFullYear();
 
 // EventListeners
 menuLinks.forEach(addMenuLinksToggleEvent);
-motivationShowMoreBtns.forEach(addMotivationShowMoreBtnsToggleEvent);
-challengesShowMoreBtns.forEach(addChallengesShowMoreBtnsToggleEvent);
+motivationReadMoreBtns.forEach(addMotivationReadMoreBtnsToggleEvent);
+challengesReadMoreBtns.forEach(addChallengesReadMoreBtnsToggleEvent);
 menuBtn.addEventListener('click', toggleSidebar);
 scrollUpBtn.addEventListener('click', handleScrollToTop);
 document.addEventListener('keydown', handleEscape);
