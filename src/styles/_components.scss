@@ -18,8 +18,8 @@
 
   &:hover {
     color: white;
-    background: b.$btn-hover-bg;
-    border: 1px solid b.$btn-hover-bg;
+    background: b.$menu-btn-hover-bg;
+    border: 1px solid b.$menu-btn-hover-bg;
   }
 
   &:focus {
@@ -28,7 +28,7 @@
   }
 
   &:active {
-    background-color: b.$btn-active-bg;
+    background-color: b.$menu-btn-active-bg;
   }
 
   @include b.mediaQuery(b.$mobile) {

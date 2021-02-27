@@ -6,7 +6,8 @@ $bg-white: #f8f8ff;
 $accent-color: #ff0066;
 // $accent-color2: #ff4d94;
 // $waves-color: #235789;
-$nav-list-hover: #35c2fa;
+// $nav-list-hover: #35c2fa;
+$link-hover-color: #248ff3;
 $divider-color: #dfdfdf;
 $underline-color-main: #2b82d8;
 $underline-color-secondary: #abe0e7;
@@ -15,8 +16,8 @@ $max-width: 1180px;
 // btn
 $btn-main-bg: #2665ad;
 // $btn-main-bg: #3039bd;
-$btn-hover-bg: #ee8888;
-$btn-active-bg: #f05d5d;
+$menu-btn-hover-bg: #ee8888;
+$menu-btn-active-bg: #f05d5d;
 
 // title
 $title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
@@ -24,9 +25,9 @@ $title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
 $title-shadow-main: #adc8fa 0px 0px 0px 2px inset,
   rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
 $title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-$title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
-  rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; // hea alternatiiv
+// $title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
+//   rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
 
 // text
 $font-family-main: 'Open Sans', sans-serif;
@@ -63,7 +64,7 @@ $small-mobile: 400px;
   font-size: 1.12rem;
   letter-spacing: 0.01em;
   border-radius: 0.25em;
-  border: 1px solid rgb(70, 107, 192);
+  border: 1px solid #466bc0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   transition: all 0.4s ease-out;
   cursor: pointer;
