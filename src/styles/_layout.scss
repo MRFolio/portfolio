@@ -36,7 +36,7 @@
       font-size: 1.3rem;
       color: b.$text-white;
       background-color: b.$bg-main;
-      padding: 0.3em;
+      padding: 0.3em 0.28em;
       border-radius: 0.25em;
       box-shadow: white 0px 0px 5px 2px;
 
@@ -48,7 +48,7 @@
     .website-heading {
       font: {
         family: 'Rock Salt', cursive;
-        size: 1.7rem;
+        size: 1.65rem;
         weight: 900;
       }
       color: b.$text-white;
@@ -70,16 +70,17 @@
 
       .portfolio {
         font: {
-          family: b.$font-family-main;
+          // family: b.$font-family-main;
           family: 'Codystar';
           weight: bold;
-          size: 1rem;
+          size: 0.94rem;
         }
+        letter-spacing: 0.02em;
         text-shadow: none;
         margin-left: 0.4em;
 
         @include b.mediaQuery(b.$mobile) {
-          font-size: 0.925rem;
+          font-size: 0.88rem;
           margin-left: 0.44em;
         }
       }
@@ -297,7 +298,7 @@
     @extend %content-maxWidth;
     text-align: center;
     font-size: 1.6rem;
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     margin: 0.2em auto;
     padding: 0.5em 0.8em;
     position: relative;
