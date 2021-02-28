@@ -20,12 +20,10 @@ $menu-btn-hover-bg: #ee8888;
 $menu-btn-active-bg: #f05d5d;
 
 // title
-$title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
-  rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
-$title-shadow-main: #adc8fa 0px 0px 0px 2px inset,
-  rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
-$title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; // hea alternatiiv
+// $title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
+//   rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
+// $title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+//   rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; // hea alternatiiv
 // $title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
 //   rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
 
@@ -36,6 +34,8 @@ $text-white: #e6e6e6;
 $text-black: #272727;
 
 // shadow
+$title-shadow-main: #adc8fa 0px 0px 0px 2px inset,
+  rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
 $accordion-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 $paper-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;

@@ -54,7 +54,7 @@
       color: b.$text-white;
       margin: 0.35em 0;
       letter-spacing: 0;
-      text-shadow: #f3dae4 0px -1px 0px;
+      text-shadow: #f3dae4 1px -1px 0px;
 
       @include b.mediaQuery(b.$mobile) {
         font-size: 1.5rem;
@@ -131,6 +131,23 @@
   justify-content: center;
   align-items: center;
 
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 166px;
+    background: url('/src/assets/waves2.svg');
+    background-size: cover;
+    background-position: 100% 33%;
+    z-index: -1;
+
+    // @include b.mediaQuery(b.$extra-large) {
+    //   height: 178px;
+    // }
+  }
+
   @include b.mediaQuery(b.$big-screen) {
     &:after {
       position: absolute;
@@ -141,10 +158,9 @@
       height: 100px;
       background: url('/src/assets/waves2.svg');
       background-size: cover;
-      // background-position: center, 5% 10%;
-      // background-position: center, 55% 10%;
-      // background-position: left, 88% 48%;
-      background-position: left center;
+      // background-position: right;
+      // background-position: center;
+      background-position: left;
       z-index: -1;
     }
   }
@@ -286,10 +302,14 @@
   place-items: center;
   // background: rgba(155, 154, 154, 0.15);
   background: rgb(159 170 236 / 15%);
+  // background: linear-gradient(rgba(#8ebeda, 0.05), rgba(#8ebeda, 0.05)),
+  //   url('/src/assets/white-waves.png');
   // background-image: url('/src/assets/swirl.png');
   @include b.mediaQuery(b.$mobile) {
     padding: 1.5em 0.65em;
     background: linear-gradient(rgba(#8ebeda, 0.05), rgba(#8ebeda, 0.05)),
+      url('/src/assets/white-waves.png');
+    background: linear-gradient(rgba(#f1f2fc, 0.95), rgba(#f1f2fc, 0.05)),
       url('/src/assets/white-waves.png');
     // background: url('/src/assets/white-waves.png');
   }
@@ -421,8 +441,8 @@
     font-size: 1.6rem;
     background: white;
     letter-spacing: 0.02em;
-    // box-shadow: b.$title-shadow-double;
     box-shadow: b.$title-shadow-main;
+    // box-shadow: b.$title-shadow-double;
     // box-shadow: b.$title-shadow-primary;
 
     // pärast componentidesse

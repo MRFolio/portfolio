@@ -214,12 +214,10 @@
 
   .icon {
     @extend %divider-base;
-    color: white;
     // background-color: #50bfd3;
     // background-color: rgb(67, 74, 175);
     // background-color: #2b82d8;
     // background-color: rgb(53, 148, 156);
-    color: #50bfd3;
     // background: linear-gradient(155deg, rgb(222, 243, 245), rgb(160, 240, 243));
     // border: 1px solid b.$divider-color;
     border: 5px solid white;
@@ -296,7 +294,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1.02em;
   line-height: 1.5;
   // background: b.$bg-white;
   background: white;
@@ -313,6 +311,10 @@
     width: 100%;
   }
 
+  .card-text-container {
+    width: 100%;
+  }
+
   .sub-title {
     font-size: 1rem;
     margin-bottom: 0.3em;
@@ -321,15 +323,11 @@
 
   .code-text {
     letter-spacing: 0.03em;
-    background: rgb(238, 238, 238);
+    background: #eaeaea;
   }
 
   .second-paragraph {
     margin-top: 0.6em;
-  }
-
-  .card-text-container {
-    width: 100%;
   }
 
   .hidden-text {
@@ -345,8 +343,7 @@
   }
 
   p a {
-    // color: rgb(33, 52, 224);
-    color: rgb(56, 74, 238);
+    color: b.$link-hover-color;
 
     &:hover {
       text-decoration: underline;
@@ -404,8 +401,8 @@
         padding: 0.32em 0.9em;
         // background: #1b7195;
         // background: rgb(0, 36, 51);
-        background: rgb(9, 38, 51);
-        // color: rgb(245, 245, 245);
+        // background: rgb(9, 38, 51);
+        background: b.$bg-header;
         color: rgb(246, 246, 246);
         // color: rgb(250, 250, 250);
         // color: b.$text-white;
@@ -470,18 +467,20 @@
     display: block;
     width: 100%;
     height: 100%;
-    // transition: all 0.45s ease-out;
+    transition: all 0.3s ease-out;
 
-    // @media only screen and (max-width: b.$tablet) and (min-width: b.$mobile) {
-    //   box-shadow: none;
-    // }
+    &.solo {
+      @media only screen and (max-width: b.$tablet) and (min-width: b.$mobile) {
+        object-fit: cover;
+      }
+    }
 
-    // &:hover {
-    //   box-shadow: 2px 5px 3px rgb(148, 148, 148);
-    //   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    //     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    //   transform: scale(1.01);
-    // }
+    &:hover {
+      box-shadow: 2px 5px 3px rgb(148, 148, 148);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      transform: scale(1.01);
+    }
 
     @include b.mediaQuery(b.$tablet) {
       height: 486px;
@@ -551,6 +550,14 @@
     line-height: 1.5;
     border-top: 1px solid;
     border-image: linear-gradient(to right, #34495e, #72a8af, #34495e) 1;
+
+    a {
+      color: b.$link-hover-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .second-paragraph {

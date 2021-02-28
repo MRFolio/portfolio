@@ -190,7 +190,7 @@
                 class="project-image"
                 src="/src/assets/e-commerce-final2.png"
                 alt="Screencapture of the deployed E-Commerce project landing page. User can choose products from different categories and sort and filter by price."
-                title="Screencapture of the landing page"
+                title="Screencapture of the E-Commerce project landing page"
             /></a>
           </div>
           <div class="card" data-aos="fade-left">
@@ -216,13 +216,15 @@
                   <a
                     href="https://fakestoreapi.com/"
                     title="Fake Store API homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >Fake Store API</a
                   >
-                  to get data for my application. I knew state management is an
-                  important aspect of an shopping site, so choosing Redux was an
-                  easy choice because it is the most widely used library in that
-                  regard. I had never utilized an UI framework before, but after
-                  some research I realized I cannot go wrong by choosing
+                  to get data for my application. I knew managing application
+                  state is an important aspect of a shopping site, so I chose to
+                  work with Redux because it is the most widely used library in
+                  that regard. I had never utilized an UI framework before, but
+                  after some research I realized I cannot go wrong by choosing
                   Material-UI.</span
                 >
               </p>
@@ -326,6 +328,8 @@
                   <a
                     href="https://www.themealdb.com/api.php"
                     title="TheMealDB homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >TheMealDB API</a
                   >
                   that fit the bill for my data requirements almost
@@ -344,7 +348,7 @@
                 getting used to writing everything in TypeScript (TS).<span
                   class="hidden-text"
                 >
-                  I got constantly screamed at by long-winded TS errors which
+                  I got constantly screamed at by long-winded TS errors, which
                   was rather intimidating at first. For educational purposes, I
                   tried to steer away from using any types to ease out of
                   trouble. Even simple tasks became quite time consuming.</span
@@ -368,9 +372,9 @@
                 <li>React</li>
                 <li>TypeScript</li>
                 <li>SCSS</li>
-                <li>Redux</li>
                 <li>React Router</li>
                 <li>Framer Motion</li>
+                <li>Redux</li>
               </ul>
             </div>
             <div class="divider card-divider"></div>
@@ -428,8 +432,8 @@
               rel="noopener noreferrer"
             >
               <img
-                class="project-image"
-                src="/src/assets/quiz1000.PNG"
+                class="project-image solo"
+                src="/src/assets/quizHello.png"
                 alt="Landing page of the deployed Quiz App project. User can create a custom quiz and then play it."
                 title="Screencapture of the Quiz App project landing page"
             /></a>
@@ -450,16 +454,18 @@
             <div class="card-text-container">
               <h5 class="title sub-title">Motivation:</h5>
               <p>
-                Before I started the project, I identified that I had to
-                solidify the fundamental skills in React and JavaScript to feel
-                more comfortable with them.<span class="hidden-text">
-                  A quiz app seemed a good option to improve my core abilities.
-                  It gave me the possibility to use React Router for the first
-                  time, and I also planned to add animations to my project. I
-                  found
+                Before I started the project, I identified I had to improve my
+                core knowledge in React and JavaScript to feel more comfortable
+                with them.<span class="hidden-text">
+                  A quiz app seemed a good option to solidify the fundamental
+                  skills. It gave me the possibility to use React Router for the
+                  first time, and I also planned to add animations to my
+                  project. I found
                   <a
                     href="https://opentdb.com/"
                     title="Open Trivia Database homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >Open Trivia Database API</a
                   >
                   to supply my app with data.</span
@@ -477,12 +483,13 @@
                 simultaneously fetch data and redirect the user to a new page
                 after a button click.<span class="hidden-text">
                   Initially, I only managed to make one of the two to
-                  successfully work. The solution was to use React Router
+                  successfully work. I asked for help from a more experienced
+                  developer friend, and the solution was to use React Router
                   useHistory hook and the push method. I had to add the state
                   which included the fetched questions data as an additional
                   parameter
                   <span class="code-text"
-                    >&nbsp; history.push({ pathname: '/questions', state: {
+                    >&nbsp;history.push({ pathname: '/questions', state: {
                     questions } }); </span
                   >.</span
                 >
@@ -505,8 +512,8 @@
               <ul class="tech-list">
                 <li>React</li>
                 <li>SCSS</li>
-                <li>React Router</li>
                 <li>Framer Motion</li>
+                <li>React Router</li>
               </ul>
             </div>
             <div class="divider card-divider"></div>
@@ -567,6 +574,8 @@
                   <a
                     href="https://www.usgs.gov/products/data-and-tools/apis"
                     title="U.S. Geological Survey API homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >U.S. Geological Survey API</a
                   >
                   which seemed compelling enough.</span
@@ -593,8 +602,13 @@
                 This was the first bigger React project I had done, and that
                 brought up many challenges in itself. Integrating React with
                 Google Maps API was the main one. I had a difficult time finding
-                exactly what I needed from the extensive Google Maps API
-                documentation.
+                exactly what I needed from the extensive
+                <a
+                  href="https://developers.google.com/maps/documentation/javascript/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google Maps API documentation.</a
+                >
               </p>
               <p class="second-paragraph hidden-text">
                 Also, I did not really know how to exactly implement most of the
@@ -677,11 +691,25 @@
             <div class="accordion-item-body" aria-expanded="false">
               <p class="accordion-item-body-content">
                 Web development sparked my interest during lockdown in May 2020.
-                In the beginning, I followed along Colt Steele's The Web
-                Developer Bootcamp Udemy course, read a lot of articles, and
-                watched other videos on the side. I completed Codecademy's
-                JavaScript curriculum in the summer, and then continued working
-                on personal projects until now.
+                In the beginning, I followed along
+                <a
+                  href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Colt Steele's The Web Developer Bootcamp</a
+                >
+                course on Udemy, read articles, and watched other educational
+                videos on the side. I completed
+                <a
+                  href="https://www.codecademy.com/learn/introduction-to-javascript"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Codecademy's JavaScript curriculum</a
+                >
+                in the summer, and then continued working on personal projects
+                until now.
               </p>
             </div>
           </article>
@@ -702,54 +730,38 @@
           </article>
           <article class="accordion-item">
             <h4 class="accordion-item-header">
-              What is usually the most difficult part of a frontend project for
+              What is usually the most difficult part of a front-end project for
               me and why?
             </h4>
             <div class="accordion-item-body" aria-expanded="false">
               <p class="accordion-item-body-content">
-                I have noticed that building consistent user experience can be
-                challenging at times. Especially in terms of making sure
+                I have learned that building consistent user experience can be
+                rather challenging at times. Especially in terms of making sure
                 everything is compatible with every browser and looking good on
                 different devices and screen sizes.
               </p>
               <p class="second-paragraph">
-                The tooling aspect is worth mentioning as well. Starting a new
-                project from scratch and setting everything up properly can
-                sometimes be rather tedious and time consuming. At the same
+                Also, choosing the right set of tools for a particular project,
+                and setting everything up properly has been quite tricky and
+                time consuming as well (e.g. Redux, TypeScript). At the same
                 time, I acknowledge that tools are there to help developers so
                 that is the trade-off I guess.
               </p>
             </div>
           </article>
-          <!-- <article class="accordion-item">
-            <h4 class="accordion-item-header">
-              What are my favourite features in modern JavaScript and why?
-            </h4>
-            <div class="accordion-item-body" aria-expanded="false">
-              <div class="accordion-item-body-content">
-                <p>
-                  I think all of the new features can come in handy at times,
-                  but I find array functions map/filter/reduce and async/await
-                  to be especially useful. They simplify the most common coding
-                  tasks so much, and as a result the code is cleaner and easier
-                  to implement and understand.
-                </p>
-              </div>
-            </div>
-          </article> -->
           <article class="accordion-item">
             <h4 class="accordion-item-header">
-              What resources do I use to learn about the latest trends in
-              front-end development?
+              What resources do I use to learn about the latest in front-end
+              development?
             </h4>
             <div class="accordion-item-body" aria-expanded="false">
               <p class="accordion-item-body-content">
-                I have signed up for different newsletters (e.g. Codecademy,
-                FreeCodeCamp) which cover a wide array of compelling subjects,
-                and keep me updated. I also search for articles, videos, and
-                interactive coding lessons on specific topics that come up while
-                I am working on my personal projects or just what I find
-                interesting at a certain time.
+                I have signed up for different newsletters (e.g. JavaScript
+                Weekly, FreeCodeCamp) and participate in several Discord
+                channels where knowledge is shared, and asking questions is
+                encouraged (e.g. The Odin Project). I also search for articles,
+                videos, and interactive coding lessons on specific topics myself
+                that usually come up while I am working on my personal projects.
               </p>
             </div>
           </article>
