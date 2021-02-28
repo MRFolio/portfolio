@@ -1,6 +1,7 @@
 // main variables
 $bg-main: #1e1645;
 $bg-header: #111436;
+// $bg-header: #1b497d;
 $bg-questions: #34495e;
 $bg-white: #f8f8ff;
 $accent-color: #ff0066;
@@ -15,7 +16,7 @@ $max-width: 1180px;
 
 // btn
 $btn-main-bg: #2665ad;
-// $btn-main-bg: #3039bd;
+// $btn-main-bg: #40a4d2;
 $menu-btn-hover-bg: #ee8888;
 $menu-btn-active-bg: #f05d5d;
 
@@ -108,16 +109,6 @@ $small-mobile: 400px;
 }
 
 //animations '
-%left-right-animation {
-  animation: left-right 1.6s 3 ease-out;
-
-  @keyframes left-right {
-    50% {
-      transform: translateX(50%);
-    }
-  }
-}
-
 %bounce-animation {
   animation: bounce 1.6s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
   @keyframes bounce {

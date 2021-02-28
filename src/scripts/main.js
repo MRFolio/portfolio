@@ -10,12 +10,7 @@ const menuBtn = document.querySelector('.hamburger-btn');
 const sidebar = document.getElementById('sidebar');
 const menuLinks = document.querySelectorAll('.menuLink');
 const questions = document.querySelectorAll('.accordion-item-header');
-const motivationReadMoreBtns = document.querySelectorAll(
-  '.read-more-btn.motivation'
-);
-const challengesReadMoreBtns = document.querySelectorAll(
-  '.read-more-btn.challenges'
-);
+const challengesReadMoreBtns = document.querySelectorAll('.read-more-btn');
 const scrollUpBtn = document.querySelector('.scroll-top-btn');
 const yearText = document.getElementById('year');
 
@@ -57,17 +52,7 @@ const handleEscape = (e) => {
   }
 };
 
-// Read more buttons
-const handleToggleShowTextShort = (e) => {
-  const text = e.currentTarget.previousElementSibling.firstElementChild;
-
-  text.classList.toggle('show-more-inline');
-
-  e.currentTarget.textContent.trim() === 'Read more...'
-    ? (e.currentTarget.textContent = 'Read less...')
-    : (e.currentTarget.textContent = 'Read more...');
-};
-
+// Read more button
 const handleToggleShowTextLong = (e) => {
   if (e.currentTarget.classList.contains('extraParagraph')) {
     const textFirstParagraph =
@@ -92,10 +77,6 @@ const handleToggleShowTextLong = (e) => {
   e.currentTarget.textContent.trim() === 'Read more...'
     ? (e.currentTarget.textContent = 'Read less...')
     : (e.currentTarget.textContent = 'Read more...');
-};
-
-const addMotivationReadMoreBtnsToggleEvent = (btn) => {
-  btn.addEventListener('click', handleToggleShowTextShort);
 };
 
 const addChallengesReadMoreBtnsToggleEvent = (btn) => {
@@ -148,7 +129,6 @@ yearText.innerHTML = new Date().getFullYear();
 
 // EventListeners
 menuLinks.forEach(addMenuLinksToggleEvent);
-motivationReadMoreBtns.forEach(addMotivationReadMoreBtnsToggleEvent);
 challengesReadMoreBtns.forEach(addChallengesReadMoreBtnsToggleEvent);
 menuBtn.addEventListener('click', toggleSidebar);
 scrollUpBtn.addEventListener('click', handleScrollToTop);
