@@ -10,7 +10,7 @@ const menuBtn = document.querySelector('.hamburger-btn');
 const sidebar = document.getElementById('sidebar');
 const menuLinks = document.querySelectorAll('.menuLink');
 const questions = document.querySelectorAll('.accordion-item-header');
-const challengesReadMoreBtns = document.querySelectorAll('.read-more-btn');
+const readMoreBtns = document.querySelectorAll('.read-more-btn');
 const scrollUpBtn = document.querySelector('.scroll-top-btn');
 const yearText = document.getElementById('year');
 
@@ -79,7 +79,7 @@ const handleToggleShowTextLong = (e) => {
     : (e.currentTarget.textContent = 'Read more...');
 };
 
-const addChallengesReadMoreBtnsToggleEvent = (btn) => {
+const addReadMoreBtnsToggleEvent = (btn) => {
   btn.addEventListener('click', handleToggleShowTextLong);
 };
 
@@ -129,7 +129,7 @@ yearText.innerHTML = new Date().getFullYear();
 
 // EventListeners
 menuLinks.forEach(addMenuLinksToggleEvent);
-challengesReadMoreBtns.forEach(addChallengesReadMoreBtnsToggleEvent);
+readMoreBtns.forEach(addReadMoreBtnsToggleEvent);
 menuBtn.addEventListener('click', toggleSidebar);
 scrollUpBtn.addEventListener('click', handleScrollToTop);
 document.addEventListener('keydown', handleEscape);

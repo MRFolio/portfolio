@@ -1,32 +1,18 @@
 // main variables
 $bg-main: #1e1645;
 $bg-header: #111436;
-// $bg-header: #1b497d;
 $bg-questions: #34495e;
-$bg-white: #f8f8ff;
 $accent-color: #ff0066;
-// $accent-color2: #ff4d94;
-// $waves-color: #235789;
-// $nav-list-hover: #35c2fa;
 $link-hover-color: #248ff3;
-$divider-color: #dfdfdf;
 $underline-color-main: #2b82d8;
 $underline-color-secondary: #abe0e7;
+$divider-color: #dfdfdf;
 $max-width: 1180px;
 
 // btn
 $btn-main-bg: #2665ad;
-// $btn-main-bg: #40a4d2;
 $menu-btn-hover-bg: #ee8888;
 $menu-btn-active-bg: #f05d5d;
-
-// title
-// $title-shadow-primary: #739ecf 0px 0px 0px 2px inset,
-//   rgb(255, 255, 255) 4px 4px 0px -2px, #adc8fa 4px 4px;
-// $title-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-//   rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; // hea alternatiiv
-// $title-shadow-double: rgb(92, 92, 201) 0px 0px 0px 2px inset,
-//   rgb(255, 255, 255) 4px 4px 0px -2px, rgb(156, 156, 221) 4px 4px;
 
 // text
 $font-family-main: 'Open Sans', sans-serif;
@@ -72,7 +58,6 @@ $small-mobile: 400px;
 
   &:hover {
     background: #173c5c;
-    // background: #2665ad;
   }
 
   &:active {
@@ -99,7 +84,6 @@ $small-mobile: 400px;
   padding: 0.37em;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  // font-size: 0.76rem;
   font-size: 0.7rem;
 }
 
@@ -145,7 +129,7 @@ $small-mobile: 400px;
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 7vh;
+  scroll-padding-top: 6.6vh;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
