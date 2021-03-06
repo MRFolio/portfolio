@@ -323,8 +323,6 @@
     }
 
     .sub-title {
-      // grid-column: 1 / -1;
-      // grid-row: 1 / 2;
       grid-area: 1 / 1 / 2 / -1;
       justify-self: start;
     }
@@ -335,10 +333,7 @@
       padding: 0.5em 1em;
       padding: 0.6em 0.8em;
       width: 100%;
-      // background: #3039bd;
       background: b.$btn-main-bg;
-      // background: #2665ad;
-      // background: #1b7195;
     }
   }
 }
@@ -355,26 +350,20 @@
   }
 
   .project-image {
-    // border: 2px solid b.$divider-color;
-    // border: 4px solid rgb(233, 233, 233);
     @extend %project-container;
     object-fit: contain;
     display: block;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease-out;
+    transition: box-shadow 0.25s ease-out;
 
     &:hover {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      transform: scale(1.01);
     }
 
     @include b.mediaQuery(b.$tablet) {
       height: 486px;
-      // overflow: hidden;
-      // object-fit: cover;
-      // box-shadow: none;
     }
 
     @include b.mediaQuery(b.$mobile) {
