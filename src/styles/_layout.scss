@@ -1,4 +1,4 @@
-@use "base" as b;
+@use 'base' as b;
 
 #header {
   position: sticky;
@@ -371,7 +371,7 @@
     justify-content: center;
     gap: 0.5em;
     width: 100%;
-    max-width: 568px;
+    max-width: 668px;
     height: 100%;
     padding: 2.15em;
     background: white;
